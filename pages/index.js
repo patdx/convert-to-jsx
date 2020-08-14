@@ -8,7 +8,7 @@ export default function Home() {
 
   const output = (() => {
     try {
-      return compile(code);
+      return compile(code ?? "");
     } catch (err) {
       return String(err);
     }
@@ -33,7 +33,6 @@ export default function Home() {
           readOnly
           value={output}
         ></textarea>
-        
       </div>
     </>
   );
