@@ -1,0 +1,499 @@
+diff --git a/node_modules/handlebars-to-jsx/dist/blockStatements.js b/node_modules/handlebars-to-jsx/dist/blockStatements.js
+new file mode 100644
+index 0000000..0b1eec6
+--- /dev/null
++++ b/node_modules/handlebars-to-jsx/dist/blockStatements.js
+@@ -0,0 +1,63 @@
++"use strict";
++Object.defineProperty(exports, "__esModule", { value: true });
++exports.createEachStatement = exports.createConditionStatement = exports.resolveBlockStatement = void 0;
++var Babel = require("@babel/types");
++var expressions_1 = require("./expressions");
++var elements_1 = require("./elements");
++var constants_1 = require("./constants");
++/**
++ * Resolves block type
++ */
++exports.resolveBlockStatement = function (blockStatement) {
++    switch (blockStatement.path.original) {
++        case 'if': {
++            return exports.createConditionStatement(blockStatement, false);
++        }
++        case 'unless': {
++            return exports.createConditionStatement(blockStatement, true);
++        }
++        case 'each': {
++            return exports.createEachStatement(blockStatement);
++        }
++        default: {
++            throw new Error("Unexpected " + blockStatement.path.original + " statement");
++        }
++    }
++};
++/**
++ * Creates condition statement
++ */
++exports.createConditionStatement = function (blockStatement, invertCondition) {
++    var program = blockStatement.program, inverse = blockStatement.inverse;
++    var boolCondSubject = Babel.callExpression(Babel.identifier('Boolean'), [expressions_1.resolveExpression(blockStatement.params[0])]);
++    if (invertCondition) {
++        boolCondSubject = Babel.unaryExpression('!', boolCondSubject);
++    }
++    if (inverse == null) {
++        // Logical expression
++        // {Boolean(variable) && <div />}
++        return Babel.logicalExpression('&&', boolCondSubject, expressions_1.createRootChildren(program.body));
++    }
++    else {
++        // Ternary expression
++        // {Boolean(variable) ? <div /> : <span />}
++        return Babel.conditionalExpression(boolCondSubject, expressions_1.createRootChildren(program.body), expressions_1.createRootChildren(inverse.body));
++    }
++};
++/**
++ * Creates each block statement
++ */
++exports.createEachStatement = function (blockStatement) {
++    var pathExpression = blockStatement.params[0];
++    var iterator = expressions_1.appendToPath(expressions_1.createPath(pathExpression), Babel.identifier('map'));
++    var mapCallbackChildren = expressions_1.createRootChildren(blockStatement.program.body);
++    // If top-level child element is JS expression, wrap into fragment to add
++    // the "key" attribute.
++    var wrappedCallbackChildren = !Babel.isJSXElement(mapCallbackChildren)
++        ? elements_1.createFragment([Babel.jsxExpressionContainer(mapCallbackChildren)])
++        : mapCallbackChildren;
++    // Adding the "key" attribute to child element
++    wrappedCallbackChildren.openingElement.attributes.push(Babel.jsxAttribute(Babel.jsxIdentifier('key'), Babel.jsxExpressionContainer(Babel.identifier(constants_1.DEFAULT_KEY_NAME))));
++    var mapCallback = Babel.arrowFunctionExpression([Babel.identifier(constants_1.DEFAULT_NAMESPACE_NAME), Babel.identifier(constants_1.DEFAULT_KEY_NAME)], wrappedCallbackChildren);
++    return Babel.callExpression(iterator, [mapCallback]);
++};
+diff --git a/node_modules/handlebars-to-jsx/dist/comments.js b/node_modules/handlebars-to-jsx/dist/comments.js
+new file mode 100644
+index 0000000..a2b76c3
+--- /dev/null
++++ b/node_modules/handlebars-to-jsx/dist/comments.js
+@@ -0,0 +1,10 @@
++"use strict";
++Object.defineProperty(exports, "__esModule", { value: true });
++exports.createComment = void 0;
++var Babel = require("@babel/types");
++exports.createComment = function (statement) {
++    var value = statement.value;
++    var emptyExpression = Babel.jsxEmptyExpression();
++    emptyExpression.innerComments = [{ type: 'CommentBlock', value: value }];
++    return Babel.jsxExpressionContainer(emptyExpression);
++};
+diff --git a/node_modules/handlebars-to-jsx/dist/componentCreator.js b/node_modules/handlebars-to-jsx/dist/componentCreator.js
+new file mode 100644
+index 0000000..d36b51d
+--- /dev/null
++++ b/node_modules/handlebars-to-jsx/dist/componentCreator.js
+@@ -0,0 +1,10 @@
++"use strict";
++Object.defineProperty(exports, "__esModule", { value: true });
++exports.createComponent = void 0;
++var Babel = require("@babel/types");
++/**
++ * Creates arrow component
++ */
++exports.createComponent = function (body) {
++    return Babel.arrowFunctionExpression([Babel.identifier('props')], body);
++};
+diff --git a/node_modules/handlebars-to-jsx/dist/constants.js b/node_modules/handlebars-to-jsx/dist/constants.js
+new file mode 100644
+index 0000000..cd4c99f
+--- /dev/null
++++ b/node_modules/handlebars-to-jsx/dist/constants.js
+@@ -0,0 +1,7 @@
++"use strict";
++Object.defineProperty(exports, "__esModule", { value: true });
++exports.DEFAULT_KEY_NAME = exports.DEFAULT_NAMESPACE_NAME = void 0;
++/** Default namespace name */
++exports.DEFAULT_NAMESPACE_NAME = 'item';
++/** @todo Describe me */
++exports.DEFAULT_KEY_NAME = 'i';
+diff --git a/node_modules/handlebars-to-jsx/dist/elements.js b/node_modules/handlebars-to-jsx/dist/elements.js
+new file mode 100644
+index 0000000..fd5ad33
+--- /dev/null
++++ b/node_modules/handlebars-to-jsx/dist/elements.js
+@@ -0,0 +1,63 @@
++"use strict";
++Object.defineProperty(exports, "__esModule", { value: true });
++exports.convertElement = exports.createAttribute = exports.createFragment = void 0;
++var Babel = require("@babel/types");
++var isSelfClosing = require("is-self-closing");
++var convertHTMLAttribute = require("react-attr-converter");
++var expressions_1 = require("./expressions");
++var styles_1 = require("./styles");
++/**
++ * Creates JSX fragment
++ */
++exports.createFragment = function (children, attributes) {
++    if (attributes === void 0) { attributes = []; }
++    var fragmentMemberExpression = Babel.jsxMemberExpression(Babel.jsxIdentifier('React'), Babel.jsxIdentifier('Fragment'));
++    var openingFragment = Babel.jsxOpeningElement(fragmentMemberExpression, attributes);
++    var closingFragment = Babel.jsxClosingElement(fragmentMemberExpression);
++    return Babel.jsxElement(openingFragment, closingFragment, children, false);
++};
++/**
++ * Coverts AttrNode to JSXAttribute
++ */
++exports.createAttribute = function (attrNode) {
++    // Unsupported attribute
++    var reactAttrName = convertHTMLAttribute(attrNode.name);
++    if (!/^[_\-A-z0-9]+$/.test(reactAttrName)) {
++        return null;
++    }
++    var name = Babel.jsxIdentifier(reactAttrName);
++    var value = attrNode.value;
++    switch (value.type) {
++        case 'TextNode': {
++            if (reactAttrName === 'style') {
++                var styleObjectExpression = styles_1.createStyleObject(value);
++                return Babel.jsxAttribute(name, Babel.jsxExpressionContainer(styleObjectExpression));
++            }
++            return Babel.jsxAttribute(name, Babel.stringLiteral(value.chars));
++        }
++        case 'MustacheStatement': {
++            return Babel.jsxAttribute(name, Babel.jsxExpressionContainer(expressions_1.resolveExpression(value.path)));
++        }
++        case 'ConcatStatement': {
++            var expression = expressions_1.createConcat(value.parts);
++            if (reactAttrName === 'style') {
++                var styleObjectExpression = styles_1.createStyleObject(value);
++                return Babel.jsxAttribute(name, Babel.jsxExpressionContainer(styleObjectExpression));
++            }
++            return Babel.jsxAttribute(name, Babel.jsxExpressionContainer(expression));
++        }
++        default: {
++            throw new Error('Unexpected attribute value');
++        }
++    }
++};
++/**
++ * Converts ElementNode to JSXElement
++ */
++exports.convertElement = function (node) {
++    var tagName = Babel.jsxIdentifier(node.tag);
++    var attributes = node.attributes.map(function (item) { return exports.createAttribute(item); }).filter(Boolean);
++    var isElementSelfClosing = node.selfClosing || isSelfClosing(node.tag);
++    var children = expressions_1.createChildren(node.children);
++    return Babel.jsxElement(Babel.jsxOpeningElement(tagName, attributes, isElementSelfClosing), Babel.jsxClosingElement(tagName), isElementSelfClosing ? [] : children, isElementSelfClosing);
++};
+diff --git a/node_modules/handlebars-to-jsx/dist/expressions.js b/node_modules/handlebars-to-jsx/dist/expressions.js
+new file mode 100644
+index 0000000..7771b6e
+--- /dev/null
++++ b/node_modules/handlebars-to-jsx/dist/expressions.js
+@@ -0,0 +1,161 @@
++"use strict";
++var __spreadArrays = (this && this.__spreadArrays) || function () {
++    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
++    for (var r = Array(s), k = 0, i = 0; i < il; i++)
++        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
++            r[k] = a[j];
++    return r;
++};
++Object.defineProperty(exports, "__esModule", { value: true });
++exports.prepareJsxText = exports.createConcat = exports.createRootChildren = exports.createChildren = exports.prependToPath = exports.appendToPath = exports.createPath = exports.resolveExpression = exports.resolveElementChild = exports.resolveStatement = void 0;
++var Babel = require("@babel/types");
++var elements_1 = require("./elements");
++var blockStatements_1 = require("./blockStatements");
++var comments_1 = require("./comments");
++/**
++ * Converts the Handlebars expression to NON-JSX JS-compatible expression.
++ * Creates top-level expression or expression which need to wrap to JSX
++ * expression container.
++ */
++exports.resolveStatement = function (statement) {
++    switch (statement.type) {
++        case 'ElementNode': {
++            return elements_1.convertElement(statement);
++        }
++        case 'TextNode': {
++            return Babel.stringLiteral(statement.chars);
++        }
++        case 'MustacheStatement': {
++            return exports.resolveExpression(statement.path);
++        }
++        case 'BlockStatement': {
++            return blockStatements_1.resolveBlockStatement(statement);
++        }
++        case 'MustacheCommentStatement':
++        case 'CommentStatement': {
++            throw new Error('Top level comments currently is not supported');
++        }
++        default: {
++            throw new Error("Unexpected expression \"" + statement.type + "\"");
++        }
++    }
++};
++/**
++ * Converts the Handlebars node to JSX-children-compatible child element.
++ * Creates JSX expression or expression container with JS expression, to place
++ * to children of a JSX element.
++ */
++exports.resolveElementChild = function (statement) {
++    switch (statement.type) {
++        case 'ElementNode': {
++            return elements_1.convertElement(statement);
++        }
++        case 'TextNode': {
++            return exports.prepareJsxText(statement.chars);
++        }
++        case 'MustacheCommentStatement':
++        case 'CommentStatement': {
++            return comments_1.createComment(statement);
++        }
++        // If it expression, create a expression container
++        default: {
++            return Babel.jsxExpressionContainer(exports.resolveStatement(statement));
++        }
++    }
++};
++/**
++ * Converts Hbs expression to Babel expression
++ */
++exports.resolveExpression = function (expression) {
++    switch (expression.type) {
++        case 'PathExpression': {
++            return exports.createPath(expression);
++        }
++        case 'BooleanLiteral': {
++            return Babel.booleanLiteral(expression.value);
++        }
++        case 'NullLiteral': {
++            return Babel.nullLiteral();
++        }
++        case 'NumberLiteral': {
++            return Babel.numericLiteral(expression.value);
++        }
++        case 'StringLiteral': {
++            return Babel.stringLiteral(expression.value);
++        }
++        case 'UndefinedLiteral': {
++            return Babel.identifier('undefined');
++        }
++        default: {
++            throw new Error('Unexpected mustache statement');
++        }
++    }
++};
++/**
++ * Returns path to variable
++ */
++exports.createPath = function (pathExpression) {
++    var parts = pathExpression.parts;
++    if (parts.length === 0) {
++        throw new Error('Unexpected empty expression parts');
++    }
++    // Start identifier
++    var acc = Babel.identifier(parts[0]);
++    for (var i = 1; i < parts.length; i++) {
++        acc = exports.appendToPath(acc, Babel.identifier(parts[i]));
++    }
++    return acc;
++};
++/**
++ * Appends item to path
++ */
++exports.appendToPath = function (path, append) {
++    return Babel.memberExpression(path, append);
++};
++/**
++ * Prepends item to path
++ */
++exports.prependToPath = function (path, prepend) {
++    return Babel.memberExpression(prepend, path);
++};
++/**
++ * Converts child statements of element to JSX-compatible expressions
++ * @param body List of Glimmer statements
++ */
++exports.createChildren = function (body) {
++    return body.reduce(function (acc, statement) {
++        var child = exports.resolveElementChild(statement);
++        return Array.isArray(child) ? __spreadArrays(acc, child) : __spreadArrays(acc, [child]);
++    }, []);
++};
++/**
++ * Converts root children
++ */
++exports.createRootChildren = function (body) {
++    return body.length === 1 ? exports.resolveStatement(body[0]) : elements_1.createFragment(exports.createChildren(body));
++};
++/**
++ * Creates attribute value concatenation
++ */
++exports.createConcat = function (parts) {
++    return parts.reduce(function (acc, item) {
++        if (acc == null) {
++            return exports.resolveStatement(item);
++        }
++        return Babel.binaryExpression('+', acc, exports.resolveStatement(item));
++    }, null);
++};
++/**
++ * Escapes syntax chars in jsx text
++ * @param text
++ */
++exports.prepareJsxText = function (text) {
++    // Escape jsx syntax chars
++    var parts = text.split(/(:?{|})/);
++    if (parts.length === 1) {
++        return Babel.jsxText(text);
++    }
++    return parts.map(function (item) {
++        return item === '{' || item === '}' ? Babel.jsxExpressionContainer(Babel.stringLiteral(item)) : Babel.jsxText(item);
++    });
++};
+diff --git a/node_modules/handlebars-to-jsx/dist/pathsPrepare.js b/node_modules/handlebars-to-jsx/dist/pathsPrepare.js
+new file mode 100644
+index 0000000..e078b3d
+--- /dev/null
++++ b/node_modules/handlebars-to-jsx/dist/pathsPrepare.js
+@@ -0,0 +1,72 @@
++"use strict";
++Object.defineProperty(exports, "__esModule", { value: true });
++exports.prepareProgramPaths = void 0;
++var syntax_1 = require("@glimmer/syntax");
++var constants_1 = require("./constants");
++/**
++ * Checks is each statement
++ */
++var isEachStatement = function (node) {
++    return node.type === 'BlockStatement' && node.path.original === 'each';
++};
++/**
++ * Creates stack of namespaces
++ */
++var createNamespaceStack = function () {
++    var namespaces = [];
++    return {
++        // Getter of length
++        get length() {
++            return namespaces.length;
++        },
++        /** Pushes sub namespaces */
++        push: function (item) {
++            return namespaces.push({
++                node: item.node,
++                name: item.name || constants_1.DEFAULT_NAMESPACE_NAME
++            });
++        },
++        /** Goes to namespace up */
++        pop: function () { return namespaces.pop(); },
++        /** Returns head item of the stack */
++        head: function () { return namespaces[namespaces.length - 1]; }
++    };
++};
++/**
++ * Prepares paths Glimmer AST for compatible with JS AST.
++ */
++exports.prepareProgramPaths = function (program, isComponent) {
++    var namespaces = createNamespaceStack();
++    // Global component namespace
++    if (isComponent) {
++        namespaces.push({ node: program, name: 'props' });
++    }
++    var eachStatementEntered = false;
++    syntax_1.traverse(program, {
++        // Process block statements
++        All: {
++            enter: function (node) {
++                if (node.type === 'Program' && eachStatementEntered) {
++                    namespaces.push({ node: node });
++                    eachStatementEntered = false;
++                }
++                if (isEachStatement(node)) {
++                    eachStatementEntered = true;
++                }
++            },
++            exit: function (node) {
++                // Exit from namespace
++                if (namespaces.length > 0 && node === namespaces.head().node) {
++                    namespaces.pop();
++                }
++            }
++        },
++        // Process path expressions
++        PathExpression: function (node) {
++            // Add prefixes
++            if (namespaces.length) {
++                node.parts.unshift(namespaces.head().name);
++            }
++        }
++    });
++};
+diff --git a/node_modules/handlebars-to-jsx/dist/program.js b/node_modules/handlebars-to-jsx/dist/program.js
+new file mode 100644
+index 0000000..cd39ad2
+--- /dev/null
++++ b/node_modules/handlebars-to-jsx/dist/program.js
+@@ -0,0 +1,24 @@
++"use strict";
++Object.defineProperty(exports, "__esModule", { value: true });
++exports.createProgram = void 0;
++var Babel = require("@babel/types");
++var expressions_1 = require("./expressions");
++var pathsPrepare_1 = require("./pathsPrepare");
++var componentCreator_1 = require("./componentCreator");
++/**
++ * Creates program statement
++ * @param hbsProgram The Handlebars program (root AST node)
++ * @param isComponent Should return JSX code wrapped as a function component
++ * @param isModule Should return generated code exported as default
++ * @param includeImport Should include react import
++ */
++exports.createProgram = function (hbsProgram, isComponent, isModule, includeImport) {
++    pathsPrepare_1.prepareProgramPaths(hbsProgram, isComponent);
++    var reactImport = Babel.importDeclaration([Babel.importDefaultSpecifier(Babel.identifier('React'))], Babel.stringLiteral('react'));
++    var componentBody = expressions_1.createRootChildren(hbsProgram.body);
++    var expression = isComponent ? componentCreator_1.createComponent(componentBody) : componentBody;
++    var statement = isModule ? Babel.exportDefaultDeclaration(expression) : Babel.expressionStatement(expression);
++    var directives = [statement];
++    includeImport && directives.unshift(reactImport);
++    return Babel.program(directives);
++};
+diff --git a/node_modules/handlebars-to-jsx/dist/styles.js b/node_modules/handlebars-to-jsx/dist/styles.js
+new file mode 100644
+index 0000000..881c704
+--- /dev/null
++++ b/node_modules/handlebars-to-jsx/dist/styles.js
+@@ -0,0 +1,35 @@
++"use strict";
++Object.defineProperty(exports, "__esModule", { value: true });
++exports.createStyleObject = exports.camelizePropName = void 0;
++var syntax_1 = require("@glimmer/syntax");
++var Babel = require("@babel/types");
++var expressions_1 = require("./expressions");
++/**
++ * Transforms "prop-name" to "propName"
++ * @param propName
++ */
++exports.camelizePropName = function (propName) { return propName.replace(/-([a-z])/g, function (_, $1) { return $1.toUpperCase(); }); };
++/**
++ * Create AST tree of style object
++ */
++exports.createStyleObject = function (hbsStatement) {
++    var rawHbsStatement = hbsStatement.type === 'TextNode' ? hbsStatement.chars : syntax_1.print(hbsStatement).slice(1, -1);
++    var objectProps = rawHbsStatement
++        .split(';')
++        .filter(function (item) { return item.length !== 0; })
++        .map(function (cssRule) {
++        var _a = cssRule.split(':').map(function (str) { return str.trim(); }), rawKey = _a[0], rawValue = _a[1];
++        var _b = [rawKey, rawValue].map(function (item) {
++            return syntax_1.preprocess(item || '').body.filter(function (item) { return item.type === 'MustacheStatement' || item.type === 'TextNode'; });
++        }), hbsKey = _b[0], hbsValue = _b[1];
++        var key = hbsKey.length === 1
++            ? hbsKey[0].type === 'TextNode'
++                ? Babel.stringLiteral(exports.camelizePropName(hbsKey[0].chars)) // Capitalize key name
++                : expressions_1.resolveStatement(hbsKey[0])
++            : expressions_1.createConcat(hbsKey);
++        var value = hbsValue.length === 1 ? expressions_1.resolveStatement(hbsValue[0]) : expressions_1.createConcat(hbsValue);
++        var isComputed = hbsKey.length > 1;
++        return Babel.objectProperty(key, value, isComputed);
++    });
++    return Babel.objectExpression(objectProps);
++};

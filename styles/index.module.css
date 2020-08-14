@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.left,
+.right {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.right {
+  overflow-x: hidden;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
