@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "handlebars-to-jsx": "0.1.2",
-    "next": "10.1.2",
+    "next": "10.1.3",
     "normalize.css": "8.0.1",
     "patch-package": "6.4.7",
     "postinstall-postinstall": "2.1.0",
