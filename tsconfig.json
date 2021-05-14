@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "lib/angular-to-jsx.js"  ],
   "exclude": [
     "node_modules"
   ]
