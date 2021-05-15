@@ -18,58 +18,77 @@ const pascalCase = (str: string) => startCase(camelCase(str)).replace(/ /g, '');
 const getChildren = (node: t.TmplAstNode): TmplAstNode[] =>
   (node as any).children ?? [];
 
-const printChildrenArray = ({ node, key, indent }: NodeContext) => {
-  return (
-    getChildren(node).map((child) => printNode({ node: child, key, indent })) ??
-    []
-  );
-};
-
-const printChildren = ({ node, key, indent }: NodeContext): string => {
-  return printChildrenArray({ node, key, indent }).join('\n');
+const printChildren = ({
+  node,
+  key,
+  indent,
+  context,
+}: NodeContext): string | undefined => {
+  const nodes = getChildren(node);
+  return printNodeFragment({ nodes, key, indent, context });
 };
 
 const printNode = ({
   node,
   key,
   indent = 0,
+  context,
 }: NodeContext): string | undefined => {
   const constructorName = node?.constructor?.name;
 
   const spaces = pad('', indent ?? 0);
 
   if (node instanceof t.TmplAstText) {
-    return `${spaces}${node.value}`;
+    return `${spaces}${context === 'script' ? `<>` : ``}${node.value}${
+      context === 'script' ? `</>` : ``
+    }`;
   } else if (node instanceof t.TmplAstBoundText) {
-    return `${spaces}${(node.value as any).source
-      .replace(/{{/g, '{')
-      .replace(/}}/g, '}')}`;
+    return `${spaces}${
+      context === 'script' ? `<>` : ``
+    }${(node.value as any).source.replace(/{{/g, '{').replace(/}}/g, '}')}${
+      context === 'script' ? `</>` : ``
+    }`;
   } else if (node instanceof t.TmplAstTemplate) {
     const templateType = node.templateAttrs?.[0]?.name;
     if (templateType === 'ngFor') {
       const sourceName = (node.templateAttrs[1].value as any).source;
       const targetName = node.variables[0].name;
-      const text = `{${sourceName}.map((${targetName}, index) => ${printChildren(
-        { node, key: 'index' }
-      )})}`;
+      const text = `${
+        context === 'template' ? `{` : `<>{`
+      }${sourceName}.map((${targetName}, index) => ${printChildren({
+        node,
+        key: 'index',
+        indent: indent + 2,
+        context: 'script',
+      })})${context === 'template' ? `}` : `}</>`}`;
       return text;
     } else if (templateType === 'ngIf') {
       const sourceName = (node.templateAttrs[0].value as any).source;
       const wrapper = sourceName.startsWith('!')
         ? sourceName
         : `Boolean(${sourceName})`;
-      const text = `{${wrapper} && ${printChildren({ node })}}`;
+      const text = `{${wrapper} && ${printChildren({
+        node,
+        key,
+        indent: 0,
+        context: 'script',
+      })}}`;
       return text;
     } else {
       const warning = `WARNING: Unknown template node type ${templateType}`;
       console.warn(warning);
-      return `<div>${warning}</div>`;
-      // return `{/* ${warning} */}`;
+      return context === 'template' ? `{/* ${warning} */}` : `null /* ${warning} */`;
     }
   } else if (node instanceof t.TmplAstElement) {
     let ngSwitchVar: string | undefined = undefined;
 
-    const tagName = node.name.includes('-') ? pascalCase(node.name) : node.name;
+    const tagName =
+      node.name === 'ng-container'
+        ? // TODO: support <> syntax
+          'Fragment'
+        : node.name.includes('-')
+        ? pascalCase(node.name)
+        : node.name;
 
     const props: Props = {};
 
@@ -179,32 +198,28 @@ const printNode = ({
             ((node as t.TmplAstTemplate).templateAttrs[0].value as any).source
           }) ? ${printNodeFragment({
             nodes: (node as t.TmplAstTemplate).children,
+            context: 'script',
+            indent: 0,
           })} :`;
         });
 
         if (ngSwitchDefaultBlock) {
           text += `\n${spaces}  ${printNodeFragment({
             nodes: (ngSwitchDefaultBlock as t.TmplAstTemplate).children,
+            context: 'script',
+            indent: 0,
           })}`;
         } else {
           text += `\n${spaces}  null`;
         }
 
         text += `\n${spaces}}`;
-
-        // const children = printChildrenArray({ node, indent: indent + 2 });
-
-        // children.forEach((child, index, array) => {
-
-        // })
-
-        //         text += `${spaces}{test ? (${children[0]}) :
-        // ${spaces}  ${children[0]}
-        // ${spaces} :
-        // ${spaces}  ${children[1]}}
-        // ${spaces}}`;
       } else {
-        text += printChildren({ node, indent: indent + 2 });
+        text += printChildren({
+          node,
+          indent: indent + 2,
+          context: 'template',
+        });
       }
 
       text += `\n${spaces}</${tagName}>`;
@@ -222,27 +237,47 @@ const printNode = ({
 /**
  * print 1 or more nodes where only 1 node can fit
  */
-const printNodeFragment = ({ nodes, key, indent = 0 }: NodeFragmentContext) => {
+const printNodeFragment = ({
+  nodes,
+  key,
+  indent = 0,
+  context,
+}: NodeFragmentContext): string | undefined => {
   const spaces = pad('', indent ?? 0);
 
-  if (nodes?.length >= 2) {
-    const text =
-      `${spaces}<>` +
-      '\n' +
-      `${nodes
-        .map((node) => printNode({ node, key, indent: indent + 2 }))
-        .join('\n')}` +
-      '\n' +
-      `${spaces}</>`;
-    return text;
+  if (context === 'script') {
+    if (nodes?.length >= 2) {
+      const text =
+        `${spaces}<>` +
+        '\n' +
+        `${nodes
+          .map((node) =>
+            printNode({ node, key, indent: indent + 2, context: 'template' })
+          )
+          .join('\n')}` +
+        '\n' +
+        `${spaces}</>`;
+      return text;
+    } else {
+      return printNode({ node: nodes[0], key, indent, context: 'script' });
+    }
   } else {
-    return printNode({ node: nodes[0], key, indent });
+    // template
+    // no need for wrapping in fragment
+    return nodes
+      .map((node) =>
+        printNode({ node, key, indent: indent + 2, context: 'template' })
+      )
+      .join('\n');
   }
 };
 
 export const compileAngularToJsx = (code: string) => {
   const ast = parseTemplate(code, 'stub').nodes;
-  let text = `const MyComponent = () => ${printNodeFragment({ nodes: ast })};`;
+  let text = `const MyComponent = () => ${printNodeFragment({
+    nodes: ast,
+    context: 'script',
+  })};`;
 
   try {
     text = format(text, {

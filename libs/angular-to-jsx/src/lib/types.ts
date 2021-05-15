@@ -13,14 +13,17 @@ export interface ClassNameProp extends Prop {
   conditional?: Record<string, string>;
 }
 
-export interface NodeContext {
-  node: TmplAstNode;
+export interface NodeContextBase {
   key?: string;
   indent?: number;
+  context: "script" | "template"
 }
 
-export interface NodeFragmentContext {
+export interface NodeContext extends NodeContextBase {
+  node: TmplAstNode;
+
+}
+
+export interface NodeFragmentContext extends NodeContextBase {
   nodes: TmplAstNode[];
-  key?: string;
-  indent?: number;
 }
