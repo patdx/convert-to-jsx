@@ -100,7 +100,7 @@
       "sourceRoot": "libs/angular-to-jsx/src",
       "projectType": "library",
       "targets": {
-        "build": {
+        "build-DISABLED": {
           "executor": "@nrwl/workspace:tsc",
           "outputs": ["{options.outputPath}"],
           "options": {
@@ -131,7 +131,7 @@
       "sourceRoot": "libs/handlebars-to-jsx/src",
       "projectType": "library",
       "targets": {
-        "build": {
+        "build-DISABLED": {
           "executor": "@nrwl/workspace:tsc",
           "outputs": ["{options.outputPath}"],
           "options": {
