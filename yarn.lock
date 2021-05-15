@@ -291,7 +291,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/forms@npm:^0.3.2":
+"@tailwindcss/forms@npm:0.3.2":
   version: 0.3.2
   resolution: "@tailwindcss/forms@npm:0.3.2"
   dependencies:
@@ -1091,7 +1091,7 @@ __metadata:
   resolution: "convert-handlebars@workspace:."
   dependencies:
     "@angular/compiler": 12.0.0
-    "@tailwindcss/forms": ^0.3.2
+    "@tailwindcss/forms": 0.3.2
     "@types/lodash": 4.14.169
     "@types/node": 14.14.45
     "@types/react": 17.0.5
@@ -1104,11 +1104,11 @@ __metadata:
     postinstall-postinstall: 2.1.0
     prettier: 2.3.0
     react: 17.0.2
-    react-attr-converter: ^0.3.1
+    react-attr-converter: 0.3.1
     react-dom: 17.0.2
     tailwindcss: latest
     typescript: 4.2.4
-    webpack-merge: ^5.7.3
+    webpack-merge: 5.7.3
   languageName: unknown
   linkType: soft
 
@@ -3473,7 +3473,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"react-attr-converter@npm:^0.3.1":
+"react-attr-converter@npm:0.3.1, react-attr-converter@npm:^0.3.1":
   version: 0.3.1
   resolution: "react-attr-converter@npm:0.3.1"
   checksum: 1dfd70593428478af9784b290f58b0fe9e5af5ae2e1410c294bf7a9843634401900af049ce9cc5f6880f1449d1f38f276f6697a8dcf7c7ea9d5e875b2b6c4535
@@ -4427,7 +4427,7 @@ typescript@4.2.4:
   languageName: node
   linkType: hard
 
-"webpack-merge@npm:^5.7.3":
+"webpack-merge@npm:5.7.3":
   version: 5.7.3
   resolution: "webpack-merge@npm:5.7.3"
   dependencies:

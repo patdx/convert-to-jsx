@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@angular/compiler": "12.0.0",
-    "@tailwindcss/forms": "^0.3.2",
+    "@tailwindcss/forms": "0.3.2",
     "@types/lodash": "4.14.169",
     "handlebars-to-jsx": "0.1.2",
     "lodash": "4.17.21",
@@ -19,7 +19,7 @@
     "postinstall-postinstall": "2.1.0",
     "prettier": "2.3.0",
     "react": "17.0.2",
-    "react-attr-converter": "^0.3.1",
+    "react-attr-converter": "0.3.1",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
@@ -29,6 +29,6 @@
     "postcss": "latest",
     "tailwindcss": "latest",
     "typescript": "4.2.4",
-    "webpack-merge": "^5.7.3"
+    "webpack-merge": "5.7.3"
   }
 }
