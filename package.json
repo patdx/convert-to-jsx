@@ -28,6 +28,7 @@
     "autoprefixer": "latest",
     "postcss": "latest",
     "tailwindcss": "latest",
-    "typescript": "4.2.4"
+    "typescript": "4.2.4",
+    "webpack-merge": "^5.7.3"
   }
 }

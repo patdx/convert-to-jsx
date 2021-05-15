@@ -1,9 +1,21 @@
-// angular needs original class names
+const { merge } = require('webpack-merge');
+
 module.exports = {
-  // webpack: function (cfg) {
-  //   cfg.plugins = cfg.plugins.filter(plugin => {
-  //     return plugin.constructor.name !== 'UglifyJsPlugin';
-  //   });
-  //   return cfg
-  // }
+  future: {
+    webpack5: true,
+  },
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+
+    const merged = merge(config, {
+      resolve: {
+        fallback: {
+          fs: "empty"
+        }
+      }
+    })
+
+    console.log(merged);
+
+    return config;
+  },
 };
