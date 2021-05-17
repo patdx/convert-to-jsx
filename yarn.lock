@@ -2810,6 +2810,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/css-to-style@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@types/css-to-style@npm:1.2.0"
+  checksum: ec3546f0f4ad507d7ed9240e54444dd1aec56aaa08ceb89538085b4aacf5f2e04dcdb05910592068ddf8f6adc3ade942715c35c7acfb77622068b5605ac971b5
+  languageName: node
+  linkType: hard
+
 "@types/estree@npm:*":
   version: 0.0.47
   resolution: "@types/estree@npm:0.0.47"
@@ -5852,6 +5859,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"css-to-style@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "css-to-style@npm:1.4.0"
+  checksum: 8eaba4749df56c7815a7ea5c438552fd6fe7cc5d136994001be9a027538e6065e4d995c38ffa4507bf333bc83471d0397dc508be51c3640104211f1223532020
+  languageName: node
+  linkType: hard
+
 "css-tree@npm:1.0.0-alpha.37":
   version: 1.0.0-alpha.37
   resolution: "css-tree@npm:1.0.0-alpha.37"
@@ -6066,6 +6080,7 @@ __metadata:
     "@nrwl/workspace": 12.3.3
     "@tailwindcss/forms": ^0.3.2
     "@testing-library/react": 11.2.6
+    "@types/css-to-style": ^1.2.0
     "@types/jest": 26.0.8
     "@types/lodash": ^4.14.169
     "@types/node": 14.14.33
@@ -6076,6 +6091,7 @@ __metadata:
     autoprefixer: latest
     babel-jest: 26.2.2
     core-js: ^3.6.5
+    css-to-style: ^1.4.0
     cypress: ^6.0.1
     document-register-element: 1.13.1
     dotenv: 8.2.0

@@ -4,9 +4,27 @@ import { compile as compileHandlebarsToJsx } from '@ctj/handlebars-to-jsx';
 import { compileAngularToJsx } from '@ctj/angular-to-jsx';
 import { useState } from 'react';
 
+const EXAMPLE_INPUT = `<div #myContainer>
+  <div *ngFor="let item of items">
+    <button autoFocus class="btn btn-primary" [class.d-block]="isFullscreen">
+      Submit
+    </button>
+    <button
+      *ngIf="canCancel"
+      class="btn btn-danger"
+      [class.d-block]="isFullscreen"
+      (click)="handleCancel($event)"
+    >
+      Submit
+    </button>
+  </div>
+</div>`
+
+
+
 export default function Home() {
-  const [compiler, setCompiler] = useState('handlebars');
-  const [code, setCode] = useState<string | undefined>();
+  const [compiler, setCompiler] = useState('angular');
+  const [code, setCode] = useState<string | undefined>(EXAMPLE_INPUT);
 
   const output = (() => {
     try {
