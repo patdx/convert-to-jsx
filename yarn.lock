@@ -1546,12 +1546,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@glimmer/interfaces@npm:0.79.1":
-  version: 0.79.1
-  resolution: "@glimmer/interfaces@npm:0.79.1"
+"@glimmer/interfaces@npm:0.84.0":
+  version: 0.84.0
+  resolution: "@glimmer/interfaces@npm:0.84.0"
   dependencies:
     "@simple-dom/interface": ^1.4.0
-  checksum: 925366a6efc9f511f9450400d23795fff8c4249c13e1ff3850cdaf16c9d1ecb6ffbdbca260cd69c1527ac26b7bb23029b6944853e212906cb81705b1c24ad267
+  checksum: 6aefc8db98974d7f150de7a43ab4d1eafa09d7789f1624e79decb7bac803a2946dcc53928cdb93ab2745aa031eeac21a3407aa2ae51fa65326ab13749299203a
   languageName: node
   linkType: hard
 
@@ -1565,15 +1565,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@glimmer/syntax@npm:0.79.1":
-  version: 0.79.1
-  resolution: "@glimmer/syntax@npm:0.79.1"
+"@glimmer/syntax@npm:0.84.0":
+  version: 0.84.0
+  resolution: "@glimmer/syntax@npm:0.84.0"
   dependencies:
-    "@glimmer/interfaces": 0.79.1
-    "@glimmer/util": 0.79.1
+    "@glimmer/interfaces": 0.84.0
+    "@glimmer/util": 0.84.0
     "@handlebars/parser": ~2.0.0
-    simple-html-tokenizer: ^0.5.10
-  checksum: 88338f91f34328148834c18f1623ff26cd18ff8857f5f83808cb6b119917046e72df83d8969fcba79e33ea0192eb9f5387c77fcbb61a3955b71264598568ba7d
+    simple-html-tokenizer: ^0.5.11
+  checksum: 4f384db63e1ec7dfa634d298dc399c078d8fbd8feac6d2e7afa5c2a3ba5ffeff7fa7844c24d2b9059416502f8ebecd13768ea82d0cd567444cf3d5efa4680848
   languageName: node
   linkType: hard
 
@@ -1589,14 +1589,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@glimmer/util@npm:0.79.1":
-  version: 0.79.1
-  resolution: "@glimmer/util@npm:0.79.1"
+"@glimmer/util@npm:0.84.0":
+  version: 0.84.0
+  resolution: "@glimmer/util@npm:0.84.0"
   dependencies:
     "@glimmer/env": 0.1.7
-    "@glimmer/interfaces": 0.79.1
+    "@glimmer/interfaces": 0.84.0
     "@simple-dom/interface": ^1.4.0
-  checksum: 6043147e26430eb66ef4ea429d51268842bc2e4e53780e90f1ef8046c32b6a3df2dfb37a01a24641e3129f137b192dcc4e96b5c8e36cdb7afff81db88ab46599
+  checksum: 895051cc5cddb09ef5d9db6e326c328a20c7cd3f00ab09899149a5612838109d3e66a9fbcb45a0971b971e8c0c86a71077dec37332f30420a1fa7ab4a9f8a7e7
   languageName: node
   linkType: hard
 
@@ -5663,7 +5663,7 @@ __metadata:
     "@babel/preset-env": 7.16.11
     "@babel/preset-react": 7.16.7
     "@babel/preset-typescript": 7.16.7
-    "@glimmer/syntax": 0.79.1
+    "@glimmer/syntax": 0.84.0
     "@nrwl/cli": 13.8.3
     "@nrwl/cypress": 13.8.3
     "@nrwl/eslint-plugin-nx": 13.8.3
@@ -12243,7 +12243,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"simple-html-tokenizer@npm:^0.5.10, simple-html-tokenizer@npm:^0.5.6":
+"simple-html-tokenizer@npm:^0.5.11, simple-html-tokenizer@npm:^0.5.6":
   version: 0.5.11
   resolution: "simple-html-tokenizer@npm:0.5.11"
   checksum: f834a5a0b169ffe10f74bd479a071a7161e0186669e28a1cd662efacdaedd27667469e2b965d5a8538d9d8e7373cb741ea8d748259221f40fa3e4bda2efbdbfc
