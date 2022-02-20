@@ -1,7 +1,3 @@
-module.exports = {
-  projects: [
-    '<rootDir>/apps/website',
-    '<rootDir>/libs/angular-to-jsx',
-    '<rootDir>/libs/handlebars-to-jsx',
-  ],
-};
+const { getJestProjects } = require('@nrwl/jest');
+
+module.exports = { projects: getJestProjects() };

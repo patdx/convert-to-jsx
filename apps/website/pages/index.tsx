@@ -1,6 +1,5 @@
 import Head from 'next/head';
-// import { compile as compileHandlebarsToJsx } from 'handlebars-to-jsx';
-import { compile as compileHandlebarsToJsx } from '@ctj/handlebars-to-jsx';
+import { compile as compileHandlebarsToJsx } from 'handlebars-to-jsx';
 import { compileAngularToJsx } from '@ctj/angular-to-jsx';
 import { useState } from 'react';
 
@@ -18,9 +17,7 @@ const EXAMPLE_INPUT = `<div #myContainer>
       Submit
     </button>
   </div>
-</div>`
-
-
+</div>`;
 
 export default function Home() {
   const [compiler, setCompiler] = useState('angular');

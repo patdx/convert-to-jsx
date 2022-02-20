@@ -20,27 +20,35 @@
           "test",
           "e2e"
         ],
-        "accessToken": "YTY3OThmZDItNzE1Yi00ZDQ4LWExOTEtOTZiMzA0MmJiMjhkfHJlYWQtd3JpdGU=",
+        "accessToken": "YzZlNjJlYzctN2MzOS00NDIyLTk0NDEtODM2NWNjYjA5YmEyfHJlYWQtd3JpdGU=",
         "canTrackAnalytics": false,
         "showUsageWarnings": true
       }
     }
   },
-  "projects": {
-    "website": {
-      "tags": []
+  "cli": {
+    "defaultCollection": "@nrwl/next"
+  },
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "babel": true
+      }
     },
-    "website-e2e": {
-      "tags": [],
-      "implicitDependencies": [
-        "website"
-      ]
-    },
-    "angular-to-jsx": {
-      "tags": []
-    },
-    "handlebars-to-jsx": {
-      "tags": []
+    "@nrwl/next": {
+      "application": {
+        "style": "css",
+        "linter": "eslint"
+      }
     }
+  },
+  "defaultProject": "website",
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
   }
 }

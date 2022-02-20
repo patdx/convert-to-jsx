@@ -1,0 +1,42 @@
+{
+  "root": "libs/angular-to-jsx",
+  "sourceRoot": "libs/angular-to-jsx/src",
+  "projectType": "library",
+  "targets": {
+    "build-DISABLED": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/libs/angular-to-jsx",
+        "main": "libs/angular-to-jsx/src/index.ts",
+        "tsConfig": "libs/angular-to-jsx/tsconfig.lib.json",
+        "assets": [
+          "libs/angular-to-jsx/*.md"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/angular-to-jsx/**/*.ts"
+        ]
+      },
+      "outputs": [
+        "{options.outputFile}"
+      ]
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/angular-to-jsx"
+      ],
+      "options": {
+        "jestConfig": "libs/angular-to-jsx/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

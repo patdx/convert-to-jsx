@@ -12,14 +12,21 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ctj/angular-to-jsx": ["libs/angular-to-jsx/src/index.ts"],
-      "@ctj/handlebars-to-jsx": ["libs/handlebars-to-jsx/src/index.ts"]
+      "@ctj/angular-to-jsx": [
+        "libs/angular-to-jsx/src/index.ts"
+      ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }
