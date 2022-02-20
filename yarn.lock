@@ -14,7 +14,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/compiler@npm:^13.2.3":
+"@angular/compiler@npm:13.2.3":
   version: 13.2.3
   resolution: "@angular/compiler@npm:13.2.3"
   dependencies:
@@ -1565,6 +1565,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@glimmer/syntax@npm:0.79.1":
+  version: 0.79.1
+  resolution: "@glimmer/syntax@npm:0.79.1"
+  dependencies:
+    "@glimmer/interfaces": 0.79.1
+    "@glimmer/util": 0.79.1
+    "@handlebars/parser": ~2.0.0
+    simple-html-tokenizer: ^0.5.10
+  checksum: 88338f91f34328148834c18f1623ff26cd18ff8857f5f83808cb6b119917046e72df83d8969fcba79e33ea0192eb9f5387c77fcbb61a3955b71264598568ba7d
+  languageName: node
+  linkType: hard
+
 "@glimmer/syntax@npm:^0.38.4":
   version: 0.38.4
   resolution: "@glimmer/syntax@npm:0.38.4"
@@ -1574,18 +1586,6 @@ __metadata:
     handlebars: ^4.0.6
     simple-html-tokenizer: ^0.5.6
   checksum: f546b2474689b8f18c6e3b9e5b66c8738135dce111d4441d03eadae9df411553032759d4dfb685e886623ae51def53e1e2273aa6a4cef6b31efb8e0c69adc3ea
-  languageName: node
-  linkType: hard
-
-"@glimmer/syntax@npm:^0.79.1":
-  version: 0.79.1
-  resolution: "@glimmer/syntax@npm:0.79.1"
-  dependencies:
-    "@glimmer/interfaces": 0.79.1
-    "@glimmer/util": 0.79.1
-    "@handlebars/parser": ~2.0.0
-    simple-html-tokenizer: ^0.5.10
-  checksum: 88338f91f34328148834c18f1623ff26cd18ff8857f5f83808cb6b119917046e72df83d8969fcba79e33ea0192eb9f5387c77fcbb61a3955b71264598568ba7d
   languageName: node
   linkType: hard
 
@@ -2238,7 +2238,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nrwl/nx-cloud@npm:^13.1.4":
+"@nrwl/nx-cloud@npm:13.1.4":
   version: 13.1.4
   resolution: "@nrwl/nx-cloud@npm:13.1.4"
   dependencies:
@@ -2978,7 +2978,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/forms@npm:^0.4.0":
+"@tailwindcss/forms@npm:0.4.0":
   version: 0.4.0
   resolution: "@tailwindcss/forms@npm:0.4.0"
   dependencies:
@@ -3169,7 +3169,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/css-to-style@npm:^1.2.0":
+"@types/css-to-style@npm:1.2.0":
   version: 1.2.0
   resolution: "@types/css-to-style@npm:1.2.0"
   checksum: 69183481f459a6b654039bd28ea185a5ee9310746d5f5cfcc2a7a5d9ad40f608855de758be690074218d3a8dfed8c4ed2fd6141247081a46ac32eab103a8c65a
@@ -3319,7 +3319,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash@npm:^4.14.178":
+"@types/lodash@npm:4.14.178":
   version: 4.14.178
   resolution: "@types/lodash@npm:4.14.178"
   checksum: a69a04a60bfc5257c3130a554b4efa0c383f0141b7b3db8ab7cf07ad2a46ea085fce66d0242da41da7e5647b133d5dfb2c15add9cbed8d7fef955e4a1e5b3128
@@ -4370,7 +4370,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:^10.2.5, autoprefixer@npm:^10.4.2":
+"autoprefixer@npm:10.4.2, autoprefixer@npm:^10.2.5":
   version: 10.4.2
   resolution: "autoprefixer@npm:10.4.2"
   dependencies:
@@ -5371,7 +5371,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:^3.0.1, core-js@npm:^3.21.1, core-js@npm:^3.6.5":
+"core-js@npm:3.21.1, core-js@npm:^3.0.1, core-js@npm:^3.6.5":
   version: 3.21.1
   resolution: "core-js@npm:3.21.1"
   checksum: d68eddd831340ad5b24ac29c72fda022a43b17f194c4278b6b875a843283d316502cb4abd07f28631d6ebc4387f66aa06e2b1b3c8fd7e08096a751b5c63f6889
@@ -5503,7 +5503,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-to-style@npm:^1.4.0":
+"css-to-style@npm:1.4.0":
   version: 1.4.0
   resolution: "css-to-style@npm:1.4.0"
   checksum: b6ca9fa122861330ef6c5636f48d992550a005ddfcbf7e6f27fab834c89a43b7332013762379d471d871718609a6e2031d1013cce4a2fe9fa28f2ca64d5e2dab
@@ -5651,12 +5651,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ctj@workspace:."
   dependencies:
-    "@angular/compiler": ^13.2.3
+    "@angular/compiler": 13.2.3
     "@babel/core": 7.17.5
     "@babel/preset-env": 7.16.11
     "@babel/preset-react": 7.16.7
     "@babel/preset-typescript": 7.16.7
-    "@glimmer/syntax": ^0.79.1
+    "@glimmer/syntax": 0.79.1
     "@nrwl/cli": 13.8.3
     "@nrwl/cypress": 13.8.3
     "@nrwl/eslint-plugin-nx": 13.8.3
@@ -5664,58 +5664,58 @@ __metadata:
     "@nrwl/js": 13.8.3
     "@nrwl/linter": 13.8.3
     "@nrwl/next": 13.8.3
-    "@nrwl/nx-cloud": ^13.1.4
+    "@nrwl/nx-cloud": 13.1.4
     "@nrwl/react": 13.8.3
     "@nrwl/tao": 13.8.3
     "@nrwl/web": 13.8.3
     "@nrwl/workspace": 13.8.3
-    "@tailwindcss/forms": ^0.4.0
+    "@tailwindcss/forms": 0.4.0
     "@testing-library/react": 12.1.3
     "@testing-library/react-hooks": 7.0.2
-    "@types/css-to-style": ^1.2.0
+    "@types/css-to-style": 1.2.0
     "@types/jest": 27.4.0
-    "@types/lodash": ^4.14.178
+    "@types/lodash": 4.14.178
     "@types/node": 14.18.12
     "@types/react": 17.0.39
     "@types/react-dom": 17.0.11
     "@typescript-eslint/eslint-plugin": 5.12.0
     "@typescript-eslint/parser": 5.12.0
-    autoprefixer: ^10.4.2
+    autoprefixer: 10.4.2
     babel-jest: 27.5.1
-    core-js: ^3.21.1
-    css-to-style: ^1.4.0
-    cypress: ^9.5.0
+    core-js: 3.21.1
+    css-to-style: 1.4.0
+    cypress: 9.5.0
     document-register-element: 1.14.10
     dotenv: 16.0.0
     eslint: 8.9.0
     eslint-config-next: 12.1.0
     eslint-config-prettier: 8.4.0
-    eslint-plugin-cypress: ^2.12.1
+    eslint-plugin-cypress: 2.12.1
     eslint-plugin-import: 2.25.4
     eslint-plugin-jsx-a11y: 6.5.1
     eslint-plugin-react: 7.28.0
     eslint-plugin-react-hooks: 4.3.0
-    handlebars-to-jsx: ^0.1.5
-    is-self-closing: ^1.0.1
+    handlebars-to-jsx: 0.1.5
+    is-self-closing: 1.0.1
     jest: 27.5.1
-    lodash: ^4.17.21
+    lodash: 4.17.21
     next: 12.1.0
-    postcss: ^8.4.6
+    postcss: 8.4.6
     prettier: 2.5.1
     react: 17.0.2
-    react-attr-converter: ^0.3.1
+    react-attr-converter: 0.3.1
     react-dom: 17.0.2
     react-test-renderer: 17.0.2
     regenerator-runtime: 0.13.9
-    tailwindcss: ^3.0.23
+    tailwindcss: 3.0.23
     ts-jest: 27.1.3
-    ts-node: ~10.5.0
-    tslib: ^2.3.1
+    ts-node: 10.5.0
+    tslib: 2.3.1
     typescript: 4.5.5
   languageName: unknown
   linkType: soft
 
-"cypress@npm:^9.5.0":
+"cypress@npm:9.5.0":
   version: 9.5.0
   resolution: "cypress@npm:9.5.0"
   dependencies:
@@ -6497,7 +6497,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-cypress@npm:^2.12.1":
+"eslint-plugin-cypress@npm:2.12.1":
   version: 2.12.1
   resolution: "eslint-plugin-cypress@npm:2.12.1"
   dependencies:
@@ -7543,7 +7543,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"handlebars-to-jsx@npm:^0.1.5":
+"handlebars-to-jsx@npm:0.1.5":
   version: 0.1.5
   resolution: "handlebars-to-jsx@npm:0.1.5"
   dependencies:
@@ -8297,7 +8297,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-self-closing@npm:^1.0.1":
+"is-self-closing@npm:1.0.1, is-self-closing@npm:^1.0.1":
   version: 1.0.1
   resolution: "is-self-closing@npm:1.0.1"
   dependencies:
@@ -9526,7 +9526,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.14, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.7.0":
+"lodash@npm:4.17.21, lodash@npm:^4.17.14, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.7.0":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
@@ -11151,7 +11151,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.2.13, postcss@npm:^8.3.5, postcss@npm:^8.4.5, postcss@npm:^8.4.6":
+"postcss@npm:8.4.6, postcss@npm:^8.2.13, postcss@npm:^8.3.5, postcss@npm:^8.4.5, postcss@npm:^8.4.6":
   version: 8.4.6
   resolution: "postcss@npm:8.4.6"
   dependencies:
@@ -11387,7 +11387,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-attr-converter@npm:^0.3.1":
+"react-attr-converter@npm:0.3.1, react-attr-converter@npm:^0.3.1":
   version: 0.3.1
   resolution: "react-attr-converter@npm:0.3.1"
   checksum: d689f9844ae4b184f053f12c4f540a5e9784b62a07680765f033275668ec32a37cf2877bbc3d09c683632b3ed925986ea00e8a7233fd6c0b5980d8788fb906c8
@@ -12806,7 +12806,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:^3.0.23":
+"tailwindcss@npm:3.0.23":
   version: 3.0.23
   resolution: "tailwindcss@npm:3.0.23"
   dependencies:
@@ -13099,7 +13099,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"ts-node@npm:~10.5.0":
+"ts-node@npm:10.5.0":
   version: 10.5.0
   resolution: "ts-node@npm:10.5.0"
   dependencies:
@@ -13180,17 +13180,17 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"tslib@npm:2.3.1, tslib@npm:^2.1.0, tslib@npm:^2.3.0, tslib@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "tslib@npm:2.3.1"
+  checksum: de17a98d4614481f7fcb5cd53ffc1aaf8654313be0291e1bfaee4b4bb31a20494b7d218ff2e15017883e8ea9626599b3b0e0229c18383ba9dce89da2adf15cb9
+  languageName: node
+  linkType: hard
+
 "tslib@npm:^1.10.0, tslib@npm:^1.8.1, tslib@npm:^1.9.0":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd
-  languageName: node
-  linkType: hard
-
-"tslib@npm:^2.1.0, tslib@npm:^2.3.0, tslib@npm:^2.3.1":
-  version: 2.3.1
-  resolution: "tslib@npm:2.3.1"
-  checksum: de17a98d4614481f7fcb5cd53ffc1aaf8654313be0291e1bfaee4b4bb31a20494b7d218ff2e15017883e8ea9626599b3b0e0229c18383ba9dce89da2adf15cb9
   languageName: node
   linkType: hard
 
