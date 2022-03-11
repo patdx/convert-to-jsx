@@ -2065,29 +2065,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nrwl/cli@npm:13.8.5":
-  version: 13.8.5
-  resolution: "@nrwl/cli@npm:13.8.5"
+"@nrwl/cli@npm:13.8.7":
+  version: 13.8.7
+  resolution: "@nrwl/cli@npm:13.8.7"
   dependencies:
-    "@nrwl/tao": 13.8.5
+    "@nrwl/tao": 13.8.7
     chalk: 4.1.0
     enquirer: ~2.3.6
     v8-compile-cache: 2.3.0
     yargs-parser: 20.0.0
   bin:
     nx: bin/nx.js
-  checksum: 963787e90cef2c1804e769093223a9a37a81851df59fed9915af00ca68a10e800c87e0a2a641a6cad801ed3a26fdc3f715026605633f7accef4402d57fd2c0ed
+  checksum: 9079dd6cebd5c9ded50255660d12d3f170dc58bb5e45514792b4bcf3c78fdb1afd350f6ba15a3282e2fb732aa00558c4aaee397dccb613b31afea615dcc0cb18
   languageName: node
   linkType: hard
 
-"@nrwl/cypress@npm:13.8.5":
-  version: 13.8.5
-  resolution: "@nrwl/cypress@npm:13.8.5"
+"@nrwl/cypress@npm:13.8.7":
+  version: 13.8.7
+  resolution: "@nrwl/cypress@npm:13.8.7"
   dependencies:
     "@cypress/webpack-preprocessor": ^5.9.1
-    "@nrwl/devkit": 13.8.5
-    "@nrwl/linter": 13.8.5
-    "@nrwl/workspace": 13.8.5
+    "@nrwl/devkit": 13.8.7
+    "@nrwl/linter": 13.8.7
+    "@nrwl/workspace": 13.8.7
     chalk: 4.1.0
     enhanced-resolve: ^5.8.3
     fork-ts-checker-webpack-plugin: 6.2.10
@@ -2102,30 +2102,30 @@ __metadata:
   peerDependenciesMeta:
     cypress:
       optional: true
-  checksum: 7bf702d9369ceef43ec9cf0da211058e8ddc483d4db55d074e5bcf308cd3f51d0ef9e6ce0bc3a5100e5b890f80a81529c6db4c4e75c821051974e28ed911aee5
+  checksum: ae3a0746f90640e7e617f919272e2aadb869b3ec38081b6a02e91d3b3bb91c498a63d2367be6e7f044e98e39732d0912b2d3259eebcce28b9a6a4f38c7685b7a
   languageName: node
   linkType: hard
 
-"@nrwl/devkit@npm:13.8.5":
-  version: 13.8.5
-  resolution: "@nrwl/devkit@npm:13.8.5"
+"@nrwl/devkit@npm:13.8.7":
+  version: 13.8.7
+  resolution: "@nrwl/devkit@npm:13.8.7"
   dependencies:
-    "@nrwl/tao": 13.8.5
+    "@nrwl/tao": 13.8.7
     ejs: ^3.1.5
     ignore: ^5.0.4
     rxjs: ^6.5.4
     semver: 7.3.4
     tslib: ^2.3.0
-  checksum: b3c58afe6255b680934c1831709621c7444c7bfda0a835a1beba1f4645047ca6829d1ec5572e355d025dbe5ee62fff69538de8bc6f9c6d131972e2397e228119
+  checksum: 31395bd799df2feefa526226ea598eea55d26694351322ac28992c4726cd4f0c5ea798e96806925cc3564e34406d20bf0532749576aa17f98f80d50bb73207d1
   languageName: node
   linkType: hard
 
-"@nrwl/eslint-plugin-nx@npm:13.8.5":
-  version: 13.8.5
-  resolution: "@nrwl/eslint-plugin-nx@npm:13.8.5"
+"@nrwl/eslint-plugin-nx@npm:13.8.7":
+  version: 13.8.7
+  resolution: "@nrwl/eslint-plugin-nx@npm:13.8.7"
   dependencies:
-    "@nrwl/devkit": 13.8.5
-    "@nrwl/workspace": 13.8.5
+    "@nrwl/devkit": 13.8.7
+    "@nrwl/workspace": 13.8.7
     "@typescript-eslint/experimental-utils": ~5.10.0
     chalk: 4.1.0
     confusing-browser-globals: ^1.0.9
@@ -2135,17 +2135,17 @@ __metadata:
   peerDependenciesMeta:
     eslint-config-prettier:
       optional: true
-  checksum: 909694b6eb84307a73cd342a93e3720e80fb7fbcc0f9c28aec626ff56d5cfae5fdf65afe9a2bae985146d3a995ef689bdb931af6a1577a926e50014dd4bfb7c2
+  checksum: 0698d045bde8ed7cb4ab4c254737a1d2da463602248a876bfbec1882fc98f9140d86cc13ca31c64c019142a911a9d2a92fe31e05bbb9c6aa72f269e5598e55e6
   languageName: node
   linkType: hard
 
-"@nrwl/jest@npm:13.8.5":
-  version: 13.8.5
-  resolution: "@nrwl/jest@npm:13.8.5"
+"@nrwl/jest@npm:13.8.7":
+  version: 13.8.7
+  resolution: "@nrwl/jest@npm:13.8.7"
   dependencies:
     "@jest/reporters": 27.2.2
     "@jest/test-result": 27.2.2
-    "@nrwl/devkit": 13.8.5
+    "@nrwl/devkit": 13.8.7
     chalk: 4.1.0
     identity-obj-proxy: 3.0.0
     jest-config: 27.2.2
@@ -2154,18 +2154,18 @@ __metadata:
     resolve.exports: 1.1.0
     rxjs: ^6.5.4
     tslib: ^2.3.0
-  checksum: 0afc6e12aae3b993bccb8756e76ef9f1d09f19e315645b1762a152b044ca20cb71f66629626f6f7adf80e4e8ba8e0c8a753ac745fb45297c6bd4a4bca5047682
+  checksum: 336cf3988aae857843397f0c3b6b82757c64da0b152969327db851aee5623d8101259e30cc482002ed588f52719cd29a9cad0a75b06b5f8f1c176056688ebdaa
   languageName: node
   linkType: hard
 
-"@nrwl/js@npm:13.8.5":
-  version: 13.8.5
-  resolution: "@nrwl/js@npm:13.8.5"
+"@nrwl/js@npm:13.8.7":
+  version: 13.8.7
+  resolution: "@nrwl/js@npm:13.8.7"
   dependencies:
-    "@nrwl/devkit": 13.8.5
-    "@nrwl/jest": 13.8.5
-    "@nrwl/linter": 13.8.5
-    "@nrwl/workspace": 13.8.5
+    "@nrwl/devkit": 13.8.7
+    "@nrwl/jest": 13.8.7
+    "@nrwl/linter": 13.8.7
+    "@nrwl/workspace": 13.8.7
     "@parcel/watcher": 2.0.4
     chalk: 4.1.0
     fast-glob: ^3.2.7
@@ -2175,16 +2175,16 @@ __metadata:
     minimatch: 3.0.4
     source-map-support: 0.5.19
     tree-kill: 1.2.2
-  checksum: 01794bfb9c7aaf9b417b915887b8bc724281b9ae662f490e381174b1171cae0234dbb60ccb2b31a89f0fc6e75eba535001b6a7e11297b276e835a61ff2f464f3
+  checksum: b08a05ff52e1e4b833adfc3ed36308b7e0668f28464259f275fce9741e441dbce92344d837b1d720a4f2115c6ecaf4f295dc28e7de224788fe23b94fd035334a
   languageName: node
   linkType: hard
 
-"@nrwl/linter@npm:13.8.5":
-  version: 13.8.5
-  resolution: "@nrwl/linter@npm:13.8.5"
+"@nrwl/linter@npm:13.8.7":
+  version: 13.8.7
+  resolution: "@nrwl/linter@npm:13.8.7"
   dependencies:
-    "@nrwl/devkit": 13.8.5
-    "@nrwl/jest": 13.8.5
+    "@nrwl/devkit": 13.8.7
+    "@nrwl/jest": 13.8.7
     "@phenomnomnominal/tsquery": 4.1.1
     tmp: ~0.2.1
     tslib: ^2.3.0
@@ -2193,22 +2193,22 @@ __metadata:
   peerDependenciesMeta:
     eslint:
       optional: true
-  checksum: d8a767a062ceb4efa7313f9c1cd58716f789dcfdc58fbe7a3c46364944a9034673a87a2a48804e531169832c276793f2b37bda9c9bd5f137d22abbbe80f60044
+  checksum: 0457a64d0bd09ee54c277e4b7520a6a16187c31170d67e56098fae3cd5fc28fd62a6b5c8ed5a06667ca3a818f20f591d64c6aaec512b15bf35b234f25e564298
   languageName: node
   linkType: hard
 
-"@nrwl/next@npm:13.8.5":
-  version: 13.8.5
-  resolution: "@nrwl/next@npm:13.8.5"
+"@nrwl/next@npm:13.8.7":
+  version: 13.8.7
+  resolution: "@nrwl/next@npm:13.8.7"
   dependencies:
     "@babel/plugin-proposal-decorators": ^7.14.5
-    "@nrwl/cypress": 13.8.5
-    "@nrwl/devkit": 13.8.5
-    "@nrwl/jest": 13.8.5
-    "@nrwl/linter": 13.8.5
-    "@nrwl/react": 13.8.5
-    "@nrwl/web": 13.8.5
-    "@nrwl/workspace": 13.8.5
+    "@nrwl/cypress": 13.8.7
+    "@nrwl/devkit": 13.8.7
+    "@nrwl/jest": 13.8.7
+    "@nrwl/linter": 13.8.7
+    "@nrwl/react": 13.8.7
+    "@nrwl/web": 13.8.7
+    "@nrwl/workspace": 13.8.7
     "@svgr/webpack": ^6.1.2
     chalk: 4.1.0
     eslint-config-next: ^12.1.0
@@ -2219,7 +2219,7 @@ __metadata:
     webpack-merge: ^5.8.0
   peerDependencies:
     next: ^12.1.0
-  checksum: 68ab8f3b0d99f2afcbb3822f21d8309852439b24e0ba6210ada97cb0db3a0530e947c81b401e945e6356aa0eeb09690f7fadec3118bec2b0c2b60bcb58531fe7
+  checksum: 7254478cc11d15cba77b30f438daa94cdab19783c5f3f3339de82d23edd6158fdac70cf8831cdd2f97c25345b76dd79abf3f7c1850efeb77fbf5dc0dd5e050ad
   languageName: node
   linkType: hard
 
@@ -2239,20 +2239,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nrwl/react@npm:13.8.5":
-  version: 13.8.5
-  resolution: "@nrwl/react@npm:13.8.5"
+"@nrwl/react@npm:13.8.7":
+  version: 13.8.7
+  resolution: "@nrwl/react@npm:13.8.7"
   dependencies:
     "@babel/core": ^7.15.0
     "@babel/preset-react": ^7.14.5
-    "@nrwl/cypress": 13.8.5
-    "@nrwl/devkit": 13.8.5
-    "@nrwl/jest": 13.8.5
-    "@nrwl/js": 13.8.5
-    "@nrwl/linter": 13.8.5
-    "@nrwl/storybook": 13.8.5
-    "@nrwl/web": 13.8.5
-    "@nrwl/workspace": 13.8.5
+    "@nrwl/cypress": 13.8.7
+    "@nrwl/devkit": 13.8.7
+    "@nrwl/jest": 13.8.7
+    "@nrwl/js": 13.8.7
+    "@nrwl/linter": 13.8.7
+    "@nrwl/storybook": 13.8.7
+    "@nrwl/web": 13.8.7
+    "@nrwl/workspace": 13.8.7
     "@pmmmwh/react-refresh-webpack-plugin": ^0.5.1
     "@storybook/node-logger": 6.1.20
     "@svgr/webpack": ^6.1.2
@@ -2266,29 +2266,29 @@ __metadata:
     url-loader: ^4.1.1
     webpack: ^5.58.1
     webpack-merge: ^5.8.0
-  checksum: efe1bcecc75f14ee19d133130d2e470316f8cb2138e4078474e74e1b2867a5e65a3f72fd8a6a5ec6119c57b468aa8feb917abd776ad043a9590b150f478ae1e6
+  checksum: 1b19552704684692e0c629b90e1a28123b308926cb13a7d4ec7f5a51945c608942c1d0117ba4b4c32dbcf8e4ec240ddd24c53b6dee4daefa0e6f2fd7e137779b
   languageName: node
   linkType: hard
 
-"@nrwl/storybook@npm:13.8.5":
-  version: 13.8.5
-  resolution: "@nrwl/storybook@npm:13.8.5"
+"@nrwl/storybook@npm:13.8.7":
+  version: 13.8.7
+  resolution: "@nrwl/storybook@npm:13.8.7"
   dependencies:
-    "@nrwl/cypress": 13.8.5
-    "@nrwl/devkit": 13.8.5
-    "@nrwl/linter": 13.8.5
-    "@nrwl/workspace": 13.8.5
+    "@nrwl/cypress": 13.8.7
+    "@nrwl/devkit": 13.8.7
+    "@nrwl/linter": 13.8.7
+    "@nrwl/workspace": 13.8.7
     core-js: ^3.6.5
     semver: 7.3.4
     ts-loader: ^9.2.6
     tsconfig-paths-webpack-plugin: 3.5.2
-  checksum: 5c5e0c14cad71e168ebdc04c0194be6b717657824622fc699698bba45767e86dce42bb195e3a149f758f87b748f8587f7f99533f425288118727058953232d22
+  checksum: 8a8c2a66a6a9f1e8fba65ee9a075e2b3056fcc26a6727d0e50f0b836b728a04278167ba30c939826a333f59419b64e5606ead16a84be6d32b2c8058eecc2073d
   languageName: node
   linkType: hard
 
-"@nrwl/tao@npm:13.8.5":
-  version: 13.8.5
-  resolution: "@nrwl/tao@npm:13.8.5"
+"@nrwl/tao@npm:13.8.7":
+  version: 13.8.7
+  resolution: "@nrwl/tao@npm:13.8.7"
   dependencies:
     "@swc-node/register": ^1.4.2
     "@swc/core": ^1.2.146
@@ -2298,7 +2298,7 @@ __metadata:
     fs-extra: ^9.1.0
     ignore: ^5.0.4
     jsonc-parser: 3.0.0
-    nx: 13.8.5
+    nx: 13.8.7
     rxjs: ^6.5.4
     rxjs-for-await: 0.0.2
     semver: 7.3.4
@@ -2308,13 +2308,13 @@ __metadata:
     yargs-parser: 20.0.0
   bin:
     tao: index.js
-  checksum: 3ac55ded2caf036eb12244dc7206ef4d5cb63fc966aa196babba1a6cb708989ba788fdd9a6d578417953ac0033c43cdfc385895e2dfd81c182928fe4a483572f
+  checksum: d3761f6393414f2a622415d30ef26b62bbe12460ba3b2126f9e3bb0e392b3db8e48533da6da48bcc70992b9f4dbe12a4730250d75cf95dbf6021c5aaac2cd29c
   languageName: node
   linkType: hard
 
-"@nrwl/web@npm:13.8.5":
-  version: 13.8.5
-  resolution: "@nrwl/web@npm:13.8.5"
+"@nrwl/web@npm:13.8.7":
+  version: 13.8.7
+  resolution: "@nrwl/web@npm:13.8.7"
   dependencies:
     "@babel/core": ^7.15.0
     "@babel/plugin-proposal-class-properties": ^7.14.5
@@ -2324,12 +2324,12 @@ __metadata:
     "@babel/preset-env": ^7.15.0
     "@babel/preset-typescript": ^7.15.0
     "@babel/runtime": ^7.14.8
-    "@nrwl/cypress": 13.8.5
-    "@nrwl/devkit": 13.8.5
-    "@nrwl/jest": 13.8.5
-    "@nrwl/js": 13.8.5
-    "@nrwl/linter": 13.8.5
-    "@nrwl/workspace": 13.8.5
+    "@nrwl/cypress": 13.8.7
+    "@nrwl/devkit": 13.8.7
+    "@nrwl/jest": 13.8.7
+    "@nrwl/js": 13.8.7
+    "@nrwl/linter": 13.8.7
+    "@nrwl/workspace": 13.8.7
     "@pmmmwh/react-refresh-webpack-plugin": ^0.5.1
     "@rollup/plugin-babel": ^5.3.0
     "@rollup/plugin-commonjs": ^20.0.0
@@ -2360,7 +2360,7 @@ __metadata:
     ignore: ^5.0.4
     less: 3.12.2
     less-loader: ^10.1.0
-    license-webpack-plugin: 4.0.0
+    license-webpack-plugin: ^4.0.2
     loader-utils: 1.2.3
     mini-css-extract-plugin: ~2.4.7
     parse5: 4.0.0
@@ -2396,18 +2396,18 @@ __metadata:
     webpack-merge: ^5.8.0
     webpack-sources: ^3.0.2
     webpack-subresource-integrity: ^5.1.0
-  checksum: 45fd3caa554c37417a24d5e0304c0b4c4c8e91ad8acb1bd359bb81072e7840d7dc1efd48b0e45d34b31ca699418cb7eebfa5cf4cb2b855d81c53da42021affef
+  checksum: e515fa69f837232551260766d0ee1d89eaa10e75e81a137578889c1135f825e0c8af0ad96dab933c44e76d07bddef4e1299f764a9f8f4bab4e9d83a1472cf91b
   languageName: node
   linkType: hard
 
-"@nrwl/workspace@npm:13.8.5":
-  version: 13.8.5
-  resolution: "@nrwl/workspace@npm:13.8.5"
+"@nrwl/workspace@npm:13.8.7":
+  version: 13.8.7
+  resolution: "@nrwl/workspace@npm:13.8.7"
   dependencies:
-    "@nrwl/cli": 13.8.5
-    "@nrwl/devkit": 13.8.5
-    "@nrwl/jest": 13.8.5
-    "@nrwl/linter": 13.8.5
+    "@nrwl/cli": 13.8.7
+    "@nrwl/devkit": 13.8.7
+    "@nrwl/jest": 13.8.7
+    "@nrwl/linter": 13.8.7
     "@parcel/watcher": 2.0.4
     chalk: 4.1.0
     chokidar: ^3.5.1
@@ -2434,7 +2434,7 @@ __metadata:
   peerDependenciesMeta:
     prettier:
       optional: true
-  checksum: 30e68c683508a021e6b548e73883d4195e61c899ec7df7121da2469a1a9d81af49335e9557bb41e4bb26fcd9d089f085fd1305c84a2c19eae654e547167d4c85
+  checksum: 0a177f4b5f380f89adf7f90e092f88d1b88f5a8609f4122ad7eadb783e037ba6b8ce3df1d9ec9c4be338ff987e4f461b247324a165a657df9e470bbb8250b186
   languageName: node
   linkType: hard
 
@@ -5864,18 +5864,18 @@ __metadata:
     "@babel/preset-react": 7.16.7
     "@babel/preset-typescript": 7.16.7
     "@glimmer/syntax": 0.84.0
-    "@nrwl/cli": 13.8.5
-    "@nrwl/cypress": 13.8.5
-    "@nrwl/eslint-plugin-nx": 13.8.5
-    "@nrwl/jest": 13.8.5
-    "@nrwl/js": 13.8.5
-    "@nrwl/linter": 13.8.5
-    "@nrwl/next": 13.8.5
+    "@nrwl/cli": 13.8.7
+    "@nrwl/cypress": 13.8.7
+    "@nrwl/eslint-plugin-nx": 13.8.7
+    "@nrwl/jest": 13.8.7
+    "@nrwl/js": 13.8.7
+    "@nrwl/linter": 13.8.7
+    "@nrwl/next": 13.8.7
     "@nrwl/nx-cloud": 13.1.6
-    "@nrwl/react": 13.8.5
-    "@nrwl/tao": 13.8.5
-    "@nrwl/web": 13.8.5
-    "@nrwl/workspace": 13.8.5
+    "@nrwl/react": 13.8.7
+    "@nrwl/tao": 13.8.7
+    "@nrwl/web": 13.8.7
+    "@nrwl/workspace": 13.8.7
     "@tailwindcss/forms": 0.5.0
     "@testing-library/react": 12.1.4
     "@testing-library/react-hooks": 7.0.2
@@ -9598,9 +9598,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"license-webpack-plugin@npm:4.0.0":
-  version: 4.0.0
-  resolution: "license-webpack-plugin@npm:4.0.0"
+"license-webpack-plugin@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "license-webpack-plugin@npm:4.0.2"
   dependencies:
     webpack-sources: ^3.0.0
   peerDependenciesMeta:
@@ -9608,7 +9608,7 @@ __metadata:
       optional: true
     webpack-sources:
       optional: true
-  checksum: a7d4884f74d476762bbc7df9e4227b7c00960031742097d4e3531d90eaf68119611de20189b7f024902a3dc181b88a91865e62751350b0b84ca23adf8385549c
+  checksum: e88ebdb9c8bdfc0926dd7211d7fe2ee8697a44bb00a96bb5e6ca844b6acb7d24dd54eb17ec485e2e0140c3cc86709d1c2bd46e091ab52af076e1e421054c8322
   languageName: node
   linkType: hard
 
@@ -10407,14 +10407,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nx@npm:13.8.5":
-  version: 13.8.5
-  resolution: "nx@npm:13.8.5"
+"nx@npm:13.8.7":
+  version: 13.8.7
+  resolution: "nx@npm:13.8.7"
   dependencies:
-    "@nrwl/cli": 13.8.5
+    "@nrwl/cli": 13.8.7
   bin:
     nx: bin/nx.js
-  checksum: cdf7acee1e620d0021e68e8e9e6bec3b6f982df0f9c0aca8d7a67da4444f4097bf7b41898cea3b152ba19e4dab6e415fa3070893ccd18a9c7824df90641757fe
+  checksum: ee53cdec5436b7581c83d97d24c90bb86d49e9d8fead9590c0f37563fac97ce19dbd7e669d7d6366fe68f6dc929916cf8fa677756261e7a06314cea215e28c0d
   languageName: node
   linkType: hard
 
