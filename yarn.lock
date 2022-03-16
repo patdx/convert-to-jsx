@@ -1646,12 +1646,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@glimmer/interfaces@npm:0.84.0":
-  version: 0.84.0
-  resolution: "@glimmer/interfaces@npm:0.84.0"
+"@glimmer/interfaces@npm:0.84.1":
+  version: 0.84.1
+  resolution: "@glimmer/interfaces@npm:0.84.1"
   dependencies:
     "@simple-dom/interface": ^1.4.0
-  checksum: 6aefc8db98974d7f150de7a43ab4d1eafa09d7789f1624e79decb7bac803a2946dcc53928cdb93ab2745aa031eeac21a3407aa2ae51fa65326ab13749299203a
+  checksum: 6de3f792b97f841376e68e8a842591ec7e23f8dd679a2adec03f7dd144eadc989e2e1350e2388efc944ee5311d8af10a87c80163e7f540c80adf2131bf467860
   languageName: node
   linkType: hard
 
@@ -1665,15 +1665,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@glimmer/syntax@npm:0.84.0":
-  version: 0.84.0
-  resolution: "@glimmer/syntax@npm:0.84.0"
+"@glimmer/syntax@npm:0.84.1":
+  version: 0.84.1
+  resolution: "@glimmer/syntax@npm:0.84.1"
   dependencies:
-    "@glimmer/interfaces": 0.84.0
-    "@glimmer/util": 0.84.0
+    "@glimmer/interfaces": 0.84.1
+    "@glimmer/util": 0.84.1
     "@handlebars/parser": ~2.0.0
     simple-html-tokenizer: ^0.5.11
-  checksum: 4f384db63e1ec7dfa634d298dc399c078d8fbd8feac6d2e7afa5c2a3ba5ffeff7fa7844c24d2b9059416502f8ebecd13768ea82d0cd567444cf3d5efa4680848
+  checksum: 822e8ae494e771b31228535dbbf34b2bfaac548d5f8af10f26db8b0c0bbdd090df9eeed2e803527a8906c2486d85fdc97071302a93b4f9f0d77df271fc6ef38b
   languageName: node
   linkType: hard
 
@@ -1689,14 +1689,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@glimmer/util@npm:0.84.0":
-  version: 0.84.0
-  resolution: "@glimmer/util@npm:0.84.0"
+"@glimmer/util@npm:0.84.1":
+  version: 0.84.1
+  resolution: "@glimmer/util@npm:0.84.1"
   dependencies:
     "@glimmer/env": 0.1.7
-    "@glimmer/interfaces": 0.84.0
+    "@glimmer/interfaces": 0.84.1
     "@simple-dom/interface": ^1.4.0
-  checksum: 895051cc5cddb09ef5d9db6e326c328a20c7cd3f00ab09899149a5612838109d3e66a9fbcb45a0971b971e8c0c86a71077dec37332f30420a1fa7ab4a9f8a7e7
+  checksum: 0e131dc279ff315c06aa4dfcc9f79ba6ed1f6206d6adf69981f629205d763321933050dc0ab04cbb554a4672a2e633790ceb3c6ac974bb778e4996a294845c40
   languageName: node
   linkType: hard
 
@@ -5995,7 +5995,7 @@ __metadata:
     "@babel/preset-env": 7.16.11
     "@babel/preset-react": 7.16.7
     "@babel/preset-typescript": 7.16.7
-    "@glimmer/syntax": 0.84.0
+    "@glimmer/syntax": 0.84.1
     "@nrwl/cli": 13.9.0
     "@nrwl/cypress": 13.9.0
     "@nrwl/eslint-plugin-nx": 13.9.0
