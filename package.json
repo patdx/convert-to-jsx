@@ -27,7 +27,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/compiler": "13.2.6",
+    "@angular/compiler": "13.3.0",
     "@glimmer/syntax": "0.84.1",
     "@nrwl/next": "13.9.0",
     "@nrwl/nx-cloud": "13.1.6",
