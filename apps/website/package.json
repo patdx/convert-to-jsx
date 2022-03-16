@@ -6,7 +6,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "handlebars-to-jsx": "0.1.5",
-    "@angular/compiler": "13.2.6",
+    "@angular/compiler": "13.3.0",
     "lodash": "4.17.21",
     "react-attr-converter": "0.3.1",
     "css-to-style": "1.4.0"
