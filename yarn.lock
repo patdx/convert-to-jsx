@@ -14,12 +14,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/compiler@npm:13.3.3":
-  version: 13.3.3
-  resolution: "@angular/compiler@npm:13.3.3"
+"@angular/compiler@npm:13.3.4":
+  version: 13.3.4
+  resolution: "@angular/compiler@npm:13.3.4"
   dependencies:
     tslib: ^2.3.0
-  checksum: 41a60508587b1c2e4443782168597d17b3522ecca0a5b77dac333920ffeb97d9225895814258c72fea90bd2c11f2a1b70504da2b3576cb60cdccbc90ef57168d
+  checksum: 5eb4eca30ad455a155faad7bcc0464d8753b116ebe89f92ed610a0fbe00e8026c33d0156c2fbb6d5d935d901aac0a145b3cc6cd072b7e0db8c6f38fa7509fa99
   languageName: node
   linkType: hard
 
@@ -6101,7 +6101,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ctj@workspace:."
   dependencies:
-    "@angular/compiler": 13.3.3
+    "@angular/compiler": 13.3.4
     "@babel/core": 7.17.9
     "@babel/preset-env": 7.16.11
     "@babel/preset-react": 7.16.7
