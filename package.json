@@ -61,7 +61,7 @@
     "@nrwl/web": "13.9.0",
     "@nrwl/workspace": "13.9.0",
     "@tailwindcss/forms": "0.5.1",
-    "@testing-library/react": "13.1.1",
+    "@testing-library/react": "13.2.0",
     "@testing-library/react-hooks": "8.0.0",
     "@types/css-to-style": "1.2.0",
     "@types/jest": "27.5.0",
