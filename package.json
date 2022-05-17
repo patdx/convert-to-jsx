@@ -45,10 +45,10 @@
     "tslib": "2.4.0"
   },
   "devDependencies": {
-    "@babel/core": "7.17.10",
-    "@babel/preset-env": "7.17.10",
-    "@babel/preset-react": "7.16.7",
-    "@babel/preset-typescript": "7.16.7",
+    "@babel/core": "7.17.12",
+    "@babel/preset-env": "7.17.12",
+    "@babel/preset-react": "7.17.12",
+    "@babel/preset-typescript": "7.17.12",
     "@nrwl/cli": "13.9.0",
     "@nrwl/cypress": "13.9.0",
     "@nrwl/eslint-plugin-nx": "13.9.0",
