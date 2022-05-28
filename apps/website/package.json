@@ -17,7 +17,7 @@
     "autoprefixer": "10.4.7",
     "postcss": "8.4.14",
     "prettier": "2.6.2",
-    "@testing-library/react": "13.2.0"
+    "@testing-library/react": "13.3.0"
   },
   "scripts": {
     "start": "next start"
