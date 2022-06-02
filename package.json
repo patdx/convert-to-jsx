@@ -30,7 +30,7 @@
     "@angular/compiler": "13.3.11",
     "@glimmer/syntax": "0.84.2",
     "@nrwl/next": "13.9.0",
-    "@nrwl/nx-cloud": "13.1.6",
+    "@nrwl/nx-cloud": "13.3.1",
     "core-js": "3.22.8",
     "css-to-style": "1.4.0",
     "document-register-element": "1.14.10",
