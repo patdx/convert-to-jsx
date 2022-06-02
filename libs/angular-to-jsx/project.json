@@ -1,5 +1,4 @@
 {
-  "root": "libs/angular-to-jsx",
   "sourceRoot": "libs/angular-to-jsx/src",
   "projectType": "library",
   "targets": {
@@ -34,7 +33,7 @@
         "coverage/libs/angular-to-jsx"
       ],
       "options": {
-        "jestConfig": "libs/angular-to-jsx/jest.config.js",
+        "jestConfig": "libs/angular-to-jsx/jest.config.ts",
         "passWithNoTests": true
       }
     }

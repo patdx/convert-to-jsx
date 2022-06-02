@@ -1,4 +1,5 @@
-module.exports = {
+/* eslint-disable */
+export default {
   displayName: 'angular-to-jsx',
   preset: '../../jest.preset.js',
   globals: {
