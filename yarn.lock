@@ -3423,19 +3423,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nrwl/nx-cloud@npm:13.1.6":
-  version: 13.1.6
-  resolution: "@nrwl/nx-cloud@npm:13.1.6"
+"@nrwl/nx-cloud@npm:14.0.5":
+  version: 14.0.5
+  resolution: "@nrwl/nx-cloud@npm:14.0.5"
   dependencies:
     axios: ^0.21.1
     chalk: 4.1.0
     node-machine-id: ^1.1.12
-    rxjs: 6.5.5
     strip-json-comments: ^3.1.1
     tar: 6.1.11
   bin:
     nx-cloud: bin/nx-cloud.js
-  checksum: 9bcb35ad7f505e39ab3024c8355e28e9b92a33b9334510740d3d6d70919b96e73e91e28bb9fd611562c874e180f7c7c7325b9d3ba63f88af1db5cbb9fb7463af
+  checksum: f48f6746c340c72633a52ae9652300176b3a305618470a33233143974dad3e468f6a94d42af415f0538d731d8d03cd5a22e67a6099d952a9181c2b9d14af4192
   languageName: node
   linkType: hard
 
@@ -7313,7 +7312,7 @@ __metadata:
     "@nrwl/js": 13.9.0
     "@nrwl/linter": 13.9.0
     "@nrwl/next": 13.9.0
-    "@nrwl/nx-cloud": 13.1.6
+    "@nrwl/nx-cloud": 14.0.5
     "@nrwl/react": 13.9.0
     "@nrwl/tao": 13.9.0
     "@nrwl/web": 13.9.0
@@ -14301,15 +14300,6 @@ resolve@^2.0.0-next.3:
   peerDependencies:
     rxjs: ^6.0.0
   checksum: 034662b7a984ab1d401dd56adfdaeca90ccc2a56dfabcea54bce0c1adac68a6c89854b62000756c910839c811b427e666598645a5cfd809df99e097eca22b9e1
-  languageName: node
-  linkType: hard
-
-"rxjs@npm:6.5.5":
-  version: 6.5.5
-  resolution: "rxjs@npm:6.5.5"
-  dependencies:
-    tslib: ^1.9.0
-  checksum: fc578fc34b73e5f35bfdd71cabf73113453e87917aecead0f3459e4403c4c4a41871c726271d9b6fe4a5e966efb02f7b1a5db2fc08dbe9ba5e239368e15adc5f
   languageName: node
   linkType: hard
 
