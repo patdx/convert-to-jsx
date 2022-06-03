@@ -5602,7 +5602,7 @@ __metadata:
     babel-jest: 27.5.1
     core-js: 3.22.8
     css-to-style: 1.4.0
-    cypress: 10.0.1
+    cypress: 10.0.2
     document-register-element: 1.14.10
     dotenv: 16.0.1
     eslint: 8.12.0
@@ -5634,9 +5634,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"cypress@npm:10.0.1":
-  version: 10.0.1
-  resolution: "cypress@npm:10.0.1"
+"cypress@npm:10.0.2":
+  version: 10.0.2
+  resolution: "cypress@npm:10.0.2"
   dependencies:
     "@cypress/request": ^2.88.10
     "@cypress/xvfb": ^1.2.4
@@ -5682,7 +5682,7 @@ __metadata:
     yauzl: ^2.10.0
   bin:
     cypress: bin/cypress
-  checksum: 77327168729bc39142dc0c3b5dc7f81cba36be087c532e907ee11ccda1fcb60f5d5bbc8ea28ac761b263be94d85d041b4c4de065cea3ed58d4a4151ca1e63863
+  checksum: 7c4c07b832138a5c923b5092284d09249ec36a68d90cbacdc79f9fed97712d445c52b3314c23bdff26c4e5f41e1753dc2501f9664efb35c7313899d4bfa41afd
   languageName: node
   linkType: hard
 
