@@ -5541,7 +5541,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:3.22.8, core-js@npm:^3.0.1, core-js@npm:^3.6.5":
+"core-js@npm:3.23.0":
+  version: 3.23.0
+  resolution: "core-js@npm:3.23.0"
+  checksum: 4fcfec8133bd31ae34482bcdf891d8dcff4a64de656b82749c56d984b227cc107f755104aefb884b284f78d3e59fad24592de039ff7f78e60316cd4ade734af4
+  languageName: node
+  linkType: hard
+
+"core-js@npm:^3.0.1, core-js@npm:^3.6.5":
   version: 3.22.8
   resolution: "core-js@npm:3.22.8"
   checksum: c79bcfea37920a5da880ad1fc8336355e833c83998bb28cd45cc59eef4d9824dd8d59ccd24d6b18ff88f284d53d9eef021ddbd2b5ab1c6305b01e98c1402e510
@@ -5851,7 +5858,7 @@ __metadata:
     "@typescript-eslint/parser": 5.28.0
     autoprefixer: 10.4.7
     babel-jest: 27.5.1
-    core-js: 3.22.8
+    core-js: 3.23.0
     css-to-style: 1.4.0
     cypress: 10.1.0
     document-register-element: 1.14.10
