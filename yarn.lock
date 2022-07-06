@@ -14,17 +14,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/compiler@npm:14.0.4":
-  version: 14.0.4
-  resolution: "@angular/compiler@npm:14.0.4"
+"@angular/compiler@npm:14.0.5":
+  version: 14.0.5
+  resolution: "@angular/compiler@npm:14.0.5"
   dependencies:
     tslib: ^2.3.0
   peerDependencies:
-    "@angular/core": 14.0.4
+    "@angular/core": 14.0.5
   peerDependenciesMeta:
     "@angular/core":
       optional: true
-  checksum: fa51b5f91a1036a5e4d506e2e90a52e186d33e940ad6a90be5b6bf1fcf7398ae201e489964a425104fc39b68f06ff9cd4b1492ed8fd17cbfb41c4d23f53c253d
+  checksum: 846a3af83f795096724a0cb5bd48c042d4b13da1735d264123beb39e28b6c5ba2a7d863a18d46db0b8828fd8d9fbb63733b137cf60755ddf0033993bf2641755
   languageName: node
   linkType: hard
 
@@ -6949,7 +6949,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ctj@workspace:."
   dependencies:
-    "@angular/compiler": 14.0.4
+    "@angular/compiler": 14.0.5
     "@babel/core": 7.18.6
     "@babel/preset-env": 7.18.6
     "@babel/preset-react": 7.18.6
