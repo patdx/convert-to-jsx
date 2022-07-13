@@ -14,6 +14,7 @@ import {
   Props,
 } from './types';
 import cssToStyle from 'css-to-style';
+import get from 'lodash/get';
 // import serializeJavascript from 'serialize-javascript';
 
 const UNSUPPORTED_PROPERTIES = [
@@ -495,7 +496,6 @@ export const compileAngularToJsx = (code: string) => {
 
   convertContext.refs.forEach((ref) => {
     text += `  const ${ref}Ref = useRef();\n`;
-    text += `  const ${ref} = ${ref}Ref.current;\n`;
   });
 
   if (convertContext.refs.length >= 1) {
@@ -513,7 +513,12 @@ export const compileAngularToJsx = (code: string) => {
       tabWidth: 2,
     });
   } catch (err) {
-    text = `WARNING: Tried to format but got error: ${err.message}\n\n` + text;
+    text = `WARNING: Tried to format but got error:\n${resolveErrorMessage(err)}\n\n` + text;
   }
   return text;
 };
+
+
+function resolveErrorMessage(err: unknown): string | undefined {
+  return get(err, "message",) || err
+}
