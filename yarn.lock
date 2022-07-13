@@ -5444,7 +5444,7 @@ __metadata:
     jest: 27.5.1
     lodash: 4.17.21
     next: 12.2.2
-    nx: ^14.4.2
+    nx: 14.4.2
     postcss: 8.4.14
     prettier: 2.7.1
     react: 18.2.0
@@ -9926,7 +9926,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nx@npm:14.4.2, nx@npm:^14.4.2":
+"nx@npm:14.4.2":
   version: 14.4.2
   resolution: "nx@npm:14.4.2"
   dependencies:
