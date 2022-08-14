@@ -42,33 +42,53 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="flex flex-col md:flex-row h-screen">
-        <div className="flex-1 flex flex-col">
-          <select
-            className="w-full"
-            value={compiler}
-            onChange={(event) => setCompiler(event.target.value)}
-          >
-            <option value="handlebars">Handlebars to JSX</option>
-            <option value="angular">Angular to JSX</option>
-          </select>
+      <div className="flex flex-col h-screen">
+        <div className="flex flex-1 flex-col md:flex-row">
+          <div className="flex-1 flex flex-col">
+            <select
+              className="w-full flex-none"
+              value={compiler}
+              onChange={(event) => setCompiler(event.target.value)}
+            >
+              <option value="handlebars">Handlebars to JSX</option>
+              <option value="angular">Angular to JSX</option>
+            </select>
+            <textarea
+              className="block w-full flex-1 font-mono"
+              placeholder={
+                compiler === 'angular'
+                  ? `Paste Angular HTML code here and JSX will be output on the right using custom Angular to JSX code`
+                  : `Paste Handlebars code here and JSX will be output on the right using jsx-to-handlebars library`
+              }
+              value={code}
+              onChange={(event) => setCode(event.target.value)}
+            ></textarea>
+          </div>
           <textarea
-            className="block w-full flex-1 font-mono"
-            placeholder={
-              compiler === 'angular'
-                ? `Paste Angular HTML code here and JSX will be output on the right using custom Angular to JSX code`
-                : `Paste Handlebars code here and JSX will be output on the right using jsx-to-handlebars library`
-            }
-            value={code}
-            onChange={(event) => setCode(event.target.value)}
+            className="flex-1 font-mono"
+            readOnly
+            value={output}
           ></textarea>
         </div>
 
-        <textarea
-          className="flex-1 font-mono"
-          readOnly
-          value={output}
-        ></textarea>
+        <div className="flex-none flex justify-center items-center gap-1">
+          <span>
+            By{' '}
+            <a
+              className="text-blue-700 hover:underline"
+              href="https://github.com/patdx"
+            >
+              @patdx
+            </a>
+          </span>
+          &middot;
+          <a
+            className="text-blue-700 hover:underline"
+            href="https://github.com/patdx/convert-to-jsx"
+          >
+            Source
+          </a>
+        </div>
       </div>
     </>
   );

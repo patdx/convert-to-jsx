@@ -50,3 +50,6 @@ Thumbs.db
 # next.js
 /.next/
 /out/
+
+# Next.js
+.next
