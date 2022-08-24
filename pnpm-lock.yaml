@@ -30,7 +30,7 @@ specifiers:
   '@typescript-eslint/parser': 5.34.0
   autoprefixer: 10.4.8
   babel-jest: 27.5.1
-  core-js: 3.24.1
+  core-js: 3.25.0
   css-to-style: 1.4.0
   cypress: 10.6.0
   document-register-element: 1.14.10
@@ -68,7 +68,7 @@ dependencies:
   '@angular/compiler': 14.1.3
   '@glimmer/syntax': 0.84.2
   '@nrwl/nx-cloud': 14.3.0
-  core-js: 3.24.1
+  core-js: 3.25.0
   css-to-style: 1.4.0
   document-register-element: 1.14.10
   handlebars-to-jsx: 0.1.5
@@ -2376,7 +2376,7 @@ packages:
       '@nrwl/devkit': 14.5.6_nx@14.5.6+typescript@4.7.4
       '@nrwl/linter': 14.5.6_jdb5ab7rkoy2rv7lejkww2vxdq
       '@nrwl/workspace': 14.5.6_a7rbsm6fwq3xvqwmp5oyrbgm6a
-      core-js: 3.24.1
+      core-js: 3.25.0
       dotenv: 10.0.0
       semver: 7.3.4
       ts-loader: 9.3.1_xnp4kzegbjokq62cajex2ovgkm
@@ -2447,7 +2447,7 @@ packages:
       chalk: 4.1.0
       chokidar: 3.5.3
       copy-webpack-plugin: 10.2.4_webpack@5.74.0
-      core-js: 3.24.1
+      core-js: 3.25.0
       css-loader: 6.7.1_webpack@5.74.0
       css-minimizer-webpack-plugin: 3.4.1_webpack@5.74.0
       enhanced-resolve: 5.10.0
@@ -4593,8 +4593,8 @@ packages:
     requiresBuild: true
     dev: true
 
-  /core-js/3.24.1:
-    resolution: {integrity: sha512-0QTBSYSUZ6Gq21utGzkfITDylE8jWC9Ne1D2MrhvlsZBI1x39OdDIVbzSqtgMndIy6BlHxBXpMGqzZmnztg2rg==}
+  /core-js/3.25.0:
+    resolution: {integrity: sha512-CVU1xvJEfJGhyCpBrzzzU1kjCfgsGUxhEvwUV2e/cOedYWHdmluamx+knDnmhqALddMG16fZvIqvs9aijsHHaA==}
     requiresBuild: true
 
   /core-util-is/1.0.2:
