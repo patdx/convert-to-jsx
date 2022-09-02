@@ -18,7 +18,7 @@ specifiers:
   '@nrwl/tao': 14.5.6
   '@nrwl/web': 14.5.6
   '@nrwl/workspace': 14.5.6
-  '@tailwindcss/forms': 0.5.2
+  '@tailwindcss/forms': 0.5.3
   '@testing-library/react': 13.3.0
   '@types/css-to-style': 1.2.0
   '@types/jest': 27.5.2
@@ -97,7 +97,7 @@ devDependencies:
   '@nrwl/tao': 14.5.6
   '@nrwl/web': 14.5.6_dpscgbfcjxoyjnrjx5epr3u6bm
   '@nrwl/workspace': 14.5.6_u5qnwzryzpursofzmzl7ohz74i
-  '@tailwindcss/forms': 0.5.2_tailwindcss@3.1.8
+  '@tailwindcss/forms': 0.5.3_tailwindcss@3.1.8
   '@testing-library/react': 13.3.0_biqbaboplfbrettd7655fr4n2y
   '@types/css-to-style': 1.2.0
   '@types/jest': 27.5.2
@@ -2942,8 +2942,8 @@ packages:
     dependencies:
       tslib: 2.4.0
 
-  /@tailwindcss/forms/0.5.2_tailwindcss@3.1.8:
-    resolution: {integrity: sha512-pSrFeJB6Bg1Mrg9CdQW3+hqZXAKsBrSG9MAfFLKy1pVA4Mb4W7C0k7mEhlmS2Dfo/otxrQOET7NJiJ9RrS563w==}
+  /@tailwindcss/forms/0.5.3_tailwindcss@3.1.8:
+    resolution: {integrity: sha512-y5mb86JUoiUgBjY/o6FJSFZSEttfb3Q5gllE4xoKjAAD+vBrnIhE4dViwUuow3va8mpH4s9jyUbUbrRGoRdc2Q==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
     dependencies:
