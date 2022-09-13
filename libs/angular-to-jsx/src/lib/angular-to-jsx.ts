@@ -240,10 +240,10 @@ const printNode = ({
         };
       } else if (input.name === 'ngClass') {
         const source = (input.value as any).source;
-        convertContext.importClassNames = true;
+        convertContext.importClsx = true;
         props.className = {
           bound: true,
-          value: `classNames(${source})`,
+          value: `clsx(${source})`,
         };
 
         // TODO: handle ngClass together with [class.xyz]
@@ -301,7 +301,7 @@ const printNode = ({
     Object.entries(props).forEach(([_key, value]) => {
       const key = convertAttribute(_key);
       if (key === 'className' && (value as ClassNameProp).conditional) {
-        convertContext.importClassNames = true;
+        convertContext.importClsx = true;
         const classNameArguments: string[] = [];
 
         if (value.value) {
@@ -318,7 +318,7 @@ const printNode = ({
             .join(', ')}}`
         );
 
-        text += ` ${key}={classNames(${classNameArguments.join(', ')})}`;
+        text += ` ${key}={clsx(${classNameArguments.join(', ')})}`;
       } else if (UNSUPPORTED_PROPERTIES.includes(key)) {
         // For properties that are known to be unsupported in React
         // do not even try to convert them.
@@ -474,8 +474,8 @@ export const compileAngularToJsx = (code: string) => {
 
   let text = '';
 
-  if (convertContext.importClassNames) {
-    text += '\n' + `import classNames from 'classnames';`;
+  if (convertContext.importClsx) {
+    text += '\n' + `import clsx from 'clsx';`;
   }
   if (convertContext.reactImports.size >= 1) {
     text +=
@@ -484,7 +484,7 @@ export const compileAngularToJsx = (code: string) => {
   }
 
   if (
-    convertContext.importClassNames ||
+    convertContext.importClsx ||
     convertContext.reactImports.size >= 1
   ) {
     text += '\n';

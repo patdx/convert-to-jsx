@@ -2,6 +2,8 @@ import Head from 'next/head';
 import { compile as compileHandlebarsToJsx } from 'handlebars-to-jsx';
 import { compileAngularToJsx } from '@ctj/angular-to-jsx';
 import { useState } from 'react';
+import { format } from 'prettier';
+import parserBabel from 'prettier/parser-babel';
 
 const EXAMPLE_INPUT = `<div #myContainer>
   <div *ngFor="let item of items">
@@ -23,7 +25,7 @@ export default function Home() {
   const [compiler, setCompiler] = useState('angular');
   const [code, setCode] = useState<string | undefined>(EXAMPLE_INPUT);
 
-  const output = (() => {
+  let output = (() => {
     try {
       if (compiler === 'handlebars') {
         return compileHandlebarsToJsx(code ?? '');
@@ -34,6 +36,16 @@ export default function Home() {
       return String(err);
     }
   })();
+
+  try {
+    output = format(output, {
+      parser: 'babel',
+      plugins: [parserBabel],
+      singleQuote: true,
+    });
+  } catch (err) {
+    console.log(err);
+  }
 
   return (
     <>

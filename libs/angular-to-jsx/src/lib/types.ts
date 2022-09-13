@@ -1,7 +1,7 @@
 import { TmplAstNode } from '@angular/compiler';
 
 export interface ConvertContext {
-  importClassNames?: boolean;
+  importClsx?: boolean;
   reactImports: Set<string>;
   refs: string[];
 }
