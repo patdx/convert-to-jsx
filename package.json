@@ -30,7 +30,7 @@
     "@angular/compiler": "14.2.3",
     "@glimmer/syntax": "0.84.2",
     "@nrwl/nx-cloud": "14.6.2",
-    "core-js": "3.25.2",
+    "core-js": "3.25.3",
     "css-to-style": "1.4.0",
     "document-register-element": "1.14.10",
     "handlebars-to-jsx": "0.1.5",
