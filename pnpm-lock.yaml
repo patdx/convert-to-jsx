@@ -21,7 +21,7 @@ specifiers:
   '@tailwindcss/forms': 0.5.3
   '@testing-library/react': 13.4.0
   '@types/css-to-style': 1.2.0
-  '@types/jest': 29.1.2
+  '@types/jest': 29.2.0
   '@types/lodash': 4.14.186
   '@types/node': 18.11.0
   '@types/react': 18.0.21
@@ -100,7 +100,7 @@ devDependencies:
   '@tailwindcss/forms': 0.5.3_tailwindcss@3.1.8
   '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
   '@types/css-to-style': 1.2.0
-  '@types/jest': 29.1.2
+  '@types/jest': 29.2.0
   '@types/lodash': 4.14.186
   '@types/node': 18.11.0
   '@types/react': 18.0.21
@@ -3370,11 +3370,11 @@ packages:
       '@types/istanbul-lib-report': 3.0.0
     dev: true
 
-  /@types/jest/29.1.2:
-    resolution: {integrity: sha512-y+nlX0h87U0R+wsGn6EBuoRWYyv3KFtwRNP3QWp9+k2tJ2/bqcGS3UxD7jgT+tiwJWWq3UsyV4Y+T6rsMT4XMg==}
+  /@types/jest/29.2.0:
+    resolution: {integrity: sha512-KO7bPV21d65PKwv3LLsD8Jn3E05pjNjRZvkm+YTacWhVmykAb07wW6IkZUmQAltwQafNcDUEUrMO2h3jeBSisg==}
     dependencies:
-      expect: 29.1.2
-      pretty-format: 29.1.2
+      expect: 29.2.0
+      pretty-format: 29.2.0
     dev: true
 
   /@types/json-schema/7.0.11:
@@ -6057,17 +6057,6 @@ packages:
       jest-matcher-utils: 28.1.3
       jest-message-util: 28.1.3
       jest-util: 28.1.3
-    dev: true
-
-  /expect/29.1.2:
-    resolution: {integrity: sha512-AuAGn1uxva5YBbBlXb+2JPxJRuemZsmlGcapPXWNSBNsQtAULfjioREGBWuI0EOvYUKjDnrCy8PW5Zlr1md5mw==}
-    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-    dependencies:
-      '@jest/expect-utils': 29.2.0
-      jest-get-type: 29.2.0
-      jest-matcher-utils: 29.2.0
-      jest-message-util: 29.2.0
-      jest-util: 29.2.0
     dev: true
 
   /expect/29.2.0:
@@ -9535,15 +9524,6 @@ packages:
     dependencies:
       '@jest/schemas': 28.1.3
       ansi-regex: 5.0.1
-      ansi-styles: 5.2.0
-      react-is: 18.2.0
-    dev: true
-
-  /pretty-format/29.1.2:
-    resolution: {integrity: sha512-CGJ6VVGXVRP2o2Dorl4mAwwvDWT25luIsYhkyVQW32E4nL+TgW939J7LlKT/npq5Cpq6j3s+sy+13yk7xYpBmg==}
-    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-    dependencies:
-      '@jest/schemas': 29.0.0
       ansi-styles: 5.2.0
       react-is: 18.2.0
     dev: true
