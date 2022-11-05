@@ -22,7 +22,7 @@ specifiers:
   '@testing-library/react': 13.4.0
   '@types/css-to-style': 1.2.0
   '@types/jest': 29.2.2
-  '@types/lodash': 4.14.186
+  '@types/lodash': 4.14.188
   '@types/node': 18.11.9
   '@types/react': 18.0.24
   '@types/react-dom': 18.0.8
@@ -101,7 +101,7 @@ devDependencies:
   '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
   '@types/css-to-style': 1.2.0
   '@types/jest': 29.2.2
-  '@types/lodash': 4.14.186
+  '@types/lodash': 4.14.188
   '@types/node': 18.11.9
   '@types/react': 18.0.24
   '@types/react-dom': 18.0.8
@@ -3372,8 +3372,8 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
 
-  /@types/lodash/4.14.186:
-    resolution: {integrity: sha512-eHcVlLXP0c2FlMPm56ITode2AgLMSa6aJ05JTTbYbI+7EMkCEE5qk2E41d5g2lCVTqRe0GnnRFurmlCsDODrPw==}
+  /@types/lodash/4.14.188:
+    resolution: {integrity: sha512-zmEmF5OIM3rb7SbLCFYoQhO4dGt2FRM9AMkxvA3LaADOF1n8in/zGJlWji9fmafLoNyz+FoL6FE0SLtGIArD7w==}
     dev: true
 
   /@types/mime/3.0.1:
