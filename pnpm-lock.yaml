@@ -13,7 +13,7 @@ specifiers:
   '@nrwl/js': 15.0.0
   '@nrwl/linter': 15.0.0
   '@nrwl/next': 15.0.0
-  '@nrwl/nx-cloud': 14.7.0
+  '@nrwl/nx-cloud': 15.0.2
   '@nrwl/react': 15.0.0
   '@nrwl/tao': 15.0.0
   '@nrwl/web': 15.0.0
@@ -67,7 +67,7 @@ specifiers:
 dependencies:
   '@angular/compiler': 14.2.9
   '@glimmer/syntax': 0.84.2
-  '@nrwl/nx-cloud': 14.7.0
+  '@nrwl/nx-cloud': 15.0.2
   core-js: 3.26.0
   css-to-style: 1.4.0
   document-register-element: 1.14.10
@@ -2488,8 +2488,8 @@ packages:
       - webpack-plugin-serve
     dev: true
 
-  /@nrwl/nx-cloud/14.7.0:
-    resolution: {integrity: sha512-sEGK5Ire5DC2liIsT89qR6SzZa46uinmWEAMz8ocMuu7nIMnwV9m15qajxhmYKasYsq9vTeT+x7BlZ4fnxPrNg==}
+  /@nrwl/nx-cloud/15.0.2:
+    resolution: {integrity: sha512-DaTASuXmGyQHMxJuK6y3f7fs+Q0qQCfYDIDVGK9muNwN/QItLeWdRNltLQxbrBeS112kQTu2FPsr0DmRD60+0A==}
     hasBin: true
     dependencies:
       axios: 0.21.4
