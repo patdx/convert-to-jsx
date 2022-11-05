@@ -42,7 +42,7 @@
     "react-dom": "18.2.0",
     "react-is": "18.2.0",
     "regenerator-runtime": "0.13.10",
-    "tslib": "2.4.0"
+    "tslib": "2.4.1"
   },
   "devDependencies": {
     "@babel/core": "7.19.6",

@@ -60,7 +60,7 @@ specifiers:
   tailwindcss: 3.2.1
   ts-jest: 29.0.3
   ts-node: 10.9.1
-  tslib: 2.4.0
+  tslib: 2.4.1
   typescript: 4.8.4
   webpack: 5.74.0
 
@@ -80,7 +80,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-is: 18.2.0
   regenerator-runtime: 0.13.10
-  tslib: 2.4.0
+  tslib: 2.4.1
 
 devDependencies:
   '@babel/core': 7.19.6
@@ -148,7 +148,7 @@ packages:
       '@angular/core':
         optional: true
     dependencies:
-      tslib: 2.4.0
+      tslib: 2.4.1
     dev: false
 
   /@babel/code-frame/7.18.6:
@@ -2279,7 +2279,7 @@ packages:
       semver: 7.3.4
       ts-loader: 9.3.1_qqxisngxjbp7lstdk7boexbu3e
       tsconfig-paths-webpack-plugin: 3.5.2
-      tslib: 2.4.0
+      tslib: 2.4.1
       webpack: 5.74.0
       webpack-node-externals: 3.0.0
     transitivePeerDependencies:
@@ -2310,7 +2310,7 @@ packages:
       ignore: 5.2.0
       nx: 15.0.0
       semver: 7.3.4
-      tslib: 2.4.0
+      tslib: 2.4.1
     transitivePeerDependencies:
       - typescript
     dev: true
@@ -2360,7 +2360,7 @@ packages:
       jest-resolve: 28.1.1
       jest-util: 28.1.1
       resolve.exports: 1.1.0
-      tslib: 2.4.0
+      tslib: 2.4.1
     transitivePeerDependencies:
       - '@types/node'
       - node-notifier
@@ -2414,7 +2414,7 @@ packages:
       eslint: 8.26.0
       nx: 15.0.0
       tmp: 0.2.1
-      tslib: 2.4.0
+      tslib: 2.4.1
     transitivePeerDependencies:
       - '@swc-node/register'
       - '@swc/core'
@@ -2592,7 +2592,7 @@ packages:
       rollup-plugin-postcss: 4.0.2_neo3lunb2qpadwxplzw7r2isgm
       rollup-plugin-typescript2: 0.31.2_dgachmnxv2vn4z2zxzdrtnzuzm
       rxjs: 6.6.7
-      tslib: 2.4.0
+      tslib: 2.4.1
     transitivePeerDependencies:
       - '@babel/core'
       - '@swc-node/register'
@@ -2673,7 +2673,7 @@ packages:
       chokidar: 3.5.3
       http-server: 14.1.0
       ignore: 5.2.0
-      tslib: 2.4.0
+      tslib: 2.4.1
     transitivePeerDependencies:
       - '@parcel/css'
       - '@swc-node/register'
@@ -2746,7 +2746,7 @@ packages:
       ts-node: 10.9.1_cbe7ovvae6zqfnmtgctpgpys54
       tsconfig-paths: 3.14.1
       tsconfig-paths-webpack-plugin: 3.5.2
-      tslib: 2.4.0
+      tslib: 2.4.1
       webpack: 5.74.0
       webpack-dev-server: 4.10.0_webpack@5.74.0
       webpack-merge: 5.8.0
@@ -2812,7 +2812,7 @@ packages:
       rxjs: 6.6.7
       semver: 7.3.4
       tmp: 0.2.1
-      tslib: 2.4.0
+      tslib: 2.4.1
       yargs: 17.5.1
       yargs-parser: 21.0.1
     transitivePeerDependencies:
@@ -3150,7 +3150,7 @@ packages:
   /@swc/helpers/0.4.11:
     resolution: {integrity: sha512-rEUrBSGIoSFuYxwBYtlUFMlE2CwGhmW+w9355/5oduSw8e5h2+Tj4UrAGNNgP9915++wj5vkQo0UuOBqOAq4nw==}
     dependencies:
-      tslib: 2.4.0
+      tslib: 2.4.1
 
   /@tailwindcss/forms/0.5.3_tailwindcss@3.2.1:
     resolution: {integrity: sha512-y5mb86JUoiUgBjY/o6FJSFZSEttfb3Q5gllE4xoKjAAD+vBrnIhE4dViwUuow3va8mpH4s9jyUbUbrRGoRdc2Q==}
@@ -3807,7 +3807,7 @@ packages:
     resolution: {integrity: sha512-Zaw58gQxjQceJqhqybJi1oUDaORT8i2GTgwICPs8v/X/Pkx35FXQba69ldHVg5pQZ6YLKpROXgyHvBaCJOFXiA==}
     dependencies:
       pkg-dir: 5.0.0
-      tslib: 2.4.0
+      tslib: 2.4.1
       upath2: 3.1.15
     dev: true
 
@@ -3820,7 +3820,7 @@ packages:
     engines: {node: '>=14.15.0'}
     dependencies:
       js-yaml: 3.14.1
-      tslib: 2.4.0
+      tslib: 2.4.1
     dev: true
 
   /@zkochan/js-yaml/0.0.6:
@@ -8705,7 +8705,7 @@ packages:
       tar-stream: 2.2.0
       tmp: 0.2.1
       tsconfig-paths: 3.14.1
-      tslib: 2.4.0
+      tslib: 2.4.1
       v8-compile-cache: 2.3.0
       yargs: 17.5.1
       yargs-parser: 21.0.1
@@ -8959,7 +8959,7 @@ packages:
   /path-is-network-drive/1.0.16:
     resolution: {integrity: sha512-nnU+ssj5jUxQ5lTxNXHkPJeQ2ZVpsoGLEyM+eSCe9Q7v2NhiJhxlCECuUvhICOIgJd3OVFTWlrmCoAE64X6qsQ==}
     dependencies:
-      tslib: 2.4.0
+      tslib: 2.4.1
     dev: true
 
   /path-key/3.1.1:
@@ -8974,7 +8974,7 @@ packages:
   /path-strip-sep/1.0.13:
     resolution: {integrity: sha512-lxc+Mv83LrhLolN1E7lhIb2XLT3epL6QT/rrLySo6MEK08E5dTKxGFGSiqr71H9W9xe7uOgzlpN8hFqpavF0Gg==}
     dependencies:
-      tslib: 2.4.0
+      tslib: 2.4.1
     dev: true
 
   /path-to-regexp/0.1.7:
@@ -9941,7 +9941,7 @@ packages:
       fs-extra: 10.1.0
       resolve: 1.22.1
       rollup: 2.78.0
-      tslib: 2.4.0
+      tslib: 2.4.1
       typescript: 4.8.4
     dev: true
 
@@ -9975,7 +9975,7 @@ packages:
   /rxjs/7.5.6:
     resolution: {integrity: sha512-dnyv2/YsXhnm461G+R/Pe5bWP41Nm6LBXEYWI6eiFP4fiwx6WRI/CD0zbdVAudd9xwLEF2IDcKXLHit0FYjUzw==}
     dependencies:
-      tslib: 2.4.0
+      tslib: 2.4.1
     dev: true
 
   /safe-buffer/5.1.2:
@@ -10885,8 +10885,8 @@ packages:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: true
 
-  /tslib/2.4.0:
-    resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
+  /tslib/2.4.1:
+    resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
 
   /tsutils/3.21.0_typescript@4.8.4:
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
@@ -11020,7 +11020,7 @@ packages:
       '@types/node': 18.11.9
       path-is-network-drive: 1.0.16
       path-strip-sep: 1.0.13
-      tslib: 2.4.0
+      tslib: 2.4.1
     dev: true
 
   /update-browserslist-db/1.0.9_browserslist@4.21.3:
