@@ -520,5 +520,5 @@ export const compileAngularToJsx = (code: string) => {
 
 
 function resolveErrorMessage(err: unknown): string | undefined {
-  return get(err, "message",) || err
+  return get(err, "message") || String(err)
 }

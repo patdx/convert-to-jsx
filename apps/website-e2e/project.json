@@ -30,5 +30,6 @@
   },
   "implicitDependencies": [
     "website"
-  ]
+  ],
+  "name": "website-e2e"
 }
