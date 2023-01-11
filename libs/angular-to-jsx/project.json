@@ -38,5 +38,6 @@
         "passWithNoTests": true
       }
     }
-  }
+  },
+  "name": "angular-to-jsx"
 }
