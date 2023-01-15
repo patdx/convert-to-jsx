@@ -32,7 +32,7 @@ specifiers:
   babel-jest: 29.3.1
   core-js: 3.27.1
   css-to-style: 1.4.0
-  cypress: ^11.0.0
+  cypress: ^12.0.0
   document-register-element: 1.14.10
   dotenv: 16.0.3
   eslint: 8.32.0
@@ -87,15 +87,15 @@ devDependencies:
   '@babel/preset-env': 7.20.2_@babel+core@7.20.12
   '@babel/preset-react': 7.18.6_@babel+core@7.20.12
   '@babel/preset-typescript': 7.18.6_@babel+core@7.20.12
-  '@nrwl/cypress': 15.4.5_vnnpjawqrgs3mctn452gaxqw2q
+  '@nrwl/cypress': 15.4.5_ap25qkxsun3jvv5hevpoutusky
   '@nrwl/eslint-plugin-nx': 15.4.5_yuf2rw4l5kabtmbzlev5fvrphq
   '@nrwl/jest': 15.4.5_wnltrhkiabcqjleyms6sum3ccu
   '@nrwl/js': 15.4.5_kzqxszkc43elz7qar653mckzgq
   '@nrwl/linter': 15.4.5_bizh4n6frhnw76zpinl75cfpam
-  '@nrwl/next': 15.4.5_iwbx35toootorf6fcvo5vlrvmu
+  '@nrwl/next': 15.4.5_7woidntan7wmql7zt6om6g3kza
   '@nrwl/react': 15.4.5_kzqxszkc43elz7qar653mckzgq
   '@nrwl/tao': 15.4.5
-  '@nrwl/web': 15.4.5_v4u4pfy2lfkxrlcegsagks3k6y
+  '@nrwl/web': 15.4.5_txkh7xplypg4dznjioervpqbfi
   '@nrwl/workspace': 15.4.5_l27ptbbgosyywejtdzamzs6pmq
   '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.4
   '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
@@ -109,7 +109,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.48.1_7uibuqfxkfaozanbtbziikiqje
   autoprefixer: 10.4.13_postcss@8.4.21
   babel-jest: 29.3.1_@babel+core@7.20.12
-  cypress: 11.2.0
+  cypress: 12.3.0
   dotenv: 16.0.3
   eslint: 8.32.0
   eslint-config-next: 13.1.2_7uibuqfxkfaozanbtbziikiqje
@@ -2285,7 +2285,7 @@ packages:
       - debug
     dev: true
 
-  /@nrwl/cypress/15.4.5_vnnpjawqrgs3mctn452gaxqw2q:
+  /@nrwl/cypress/15.4.5_ap25qkxsun3jvv5hevpoutusky:
     resolution: {integrity: sha512-w1zO8RRks6fLttOGdVVnxDaC7dYdX4nPZzJWydLeIl7UiCQT7g6OtSxb+kCqwTz4L4c06Nq2hxCMxzkYH1QETw==}
     peerDependencies:
       cypress: '>= 3 < 12'
@@ -2298,7 +2298,7 @@ packages:
       '@nrwl/workspace': 15.4.5_l27ptbbgosyywejtdzamzs6pmq
       '@phenomnomnominal/tsquery': 4.1.1_typescript@4.9.4
       chalk: 4.1.0
-      cypress: 11.2.0
+      cypress: 12.3.0
       dotenv: 10.0.0
       semver: 7.3.4
     transitivePeerDependencies:
@@ -2415,13 +2415,13 @@ packages:
       - typescript
     dev: true
 
-  /@nrwl/next/15.4.5_iwbx35toootorf6fcvo5vlrvmu:
+  /@nrwl/next/15.4.5_7woidntan7wmql7zt6om6g3kza:
     resolution: {integrity: sha512-37YHRubvTCf9/iRRHXUxfokQcNhZjWFtu95dtwzN8fxN/74+Wttx/H4IkLaI2te0aC9zQLpDCsW8LfGxY45Tgg==}
     peerDependencies:
       next: ^13.0.0
     dependencies:
       '@babel/plugin-proposal-decorators': 7.18.10_@babel+core@7.20.12
-      '@nrwl/cypress': 15.4.5_vnnpjawqrgs3mctn452gaxqw2q
+      '@nrwl/cypress': 15.4.5_ap25qkxsun3jvv5hevpoutusky
       '@nrwl/devkit': 15.4.5_nx@15.4.5+typescript@4.9.4
       '@nrwl/jest': 15.4.5_wnltrhkiabcqjleyms6sum3ccu
       '@nrwl/linter': 15.4.5_bizh4n6frhnw76zpinl75cfpam
@@ -2579,7 +2579,7 @@ packages:
       - typescript
     dev: true
 
-  /@nrwl/web/15.4.5_v4u4pfy2lfkxrlcegsagks3k6y:
+  /@nrwl/web/15.4.5_txkh7xplypg4dznjioervpqbfi:
     resolution: {integrity: sha512-K8Ns84H7Yru5LxDZZR5Q3/+j8DbEi2LahLTpIkY7G6ohuk9A2ZhR2M5UHZSSTI7qb8A+GDOP29KABkCzuhEbHg==}
     dependencies:
       '@babel/core': 7.20.12
@@ -2589,7 +2589,7 @@ packages:
       '@babel/preset-env': 7.20.2_@babel+core@7.20.12
       '@babel/preset-typescript': 7.18.6_@babel+core@7.20.12
       '@babel/runtime': 7.18.9
-      '@nrwl/cypress': 15.4.5_vnnpjawqrgs3mctn452gaxqw2q
+      '@nrwl/cypress': 15.4.5_ap25qkxsun3jvv5hevpoutusky
       '@nrwl/devkit': 15.4.5_nx@15.4.5+typescript@4.9.4
       '@nrwl/jest': 15.4.5_wnltrhkiabcqjleyms6sum3ccu
       '@nrwl/js': 15.4.5_kzqxszkc43elz7qar653mckzgq
@@ -5006,9 +5006,9 @@ packages:
     resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
     dev: true
 
-  /cypress/11.2.0:
-    resolution: {integrity: sha512-u61UGwtu7lpsNWLUma/FKNOsrjcI6wleNmda/TyKHe0dOBcVjbCPlp1N6uwFZ0doXev7f/91YDpU9bqDCFeBLA==}
-    engines: {node: '>=12.0.0'}
+  /cypress/12.3.0:
+    resolution: {integrity: sha512-ZQNebibi6NBt51TRxRMYKeFvIiQZ01t50HSy7z/JMgRVqBUey3cdjog5MYEbzG6Ktti5ckDt1tfcC47lmFwXkw==}
+    engines: {node: ^14.0.0 || ^16.0.0 || >=18.0.0}
     hasBin: true
     requiresBuild: true
     dependencies:
