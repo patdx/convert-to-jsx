@@ -60,7 +60,7 @@
     "@nrwl/web": "15.4.5",
     "@nrwl/workspace": "15.4.5",
     "@tailwindcss/forms": "0.5.3",
-    "@testing-library/react": "13.4.0",
+    "@testing-library/react": "14.0.0",
     "@types/css-to-style": "1.2.0",
     "@types/jest": "29.4.0",
     "@types/lodash": "4.14.191",
