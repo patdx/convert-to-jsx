@@ -30,7 +30,7 @@ specifiers:
   '@typescript-eslint/parser': 5.53.0
   autoprefixer: 10.4.13
   babel-jest: 29.4.3
-  core-js: 3.28.0
+  core-js: 3.29.0
   css-to-style: 1.4.0
   cypress: ^12.0.0
   document-register-element: 1.14.10
@@ -68,7 +68,7 @@ dependencies:
   '@angular/compiler': 15.2.1
   '@glimmer/syntax': 0.84.2
   '@nrwl/nx-cloud': 15.0.2
-  core-js: 3.28.0
+  core-js: 3.29.0
   css-to-style: 1.4.0
   document-register-element: 1.14.10
   handlebars-to-jsx: 0.1.5
@@ -4773,8 +4773,8 @@ packages:
       browserslist: 4.21.4
     dev: true
 
-  /core-js/3.28.0:
-    resolution: {integrity: sha512-GiZn9D4Z/rSYvTeg1ljAIsEqFm0LaN9gVtwDCrKL80zHtS31p9BAjmTxVqTQDMpwlMolJZOFntUG2uwyj7DAqw==}
+  /core-js/3.29.0:
+    resolution: {integrity: sha512-VG23vuEisJNkGl6XQmFJd3rEG/so/CNatqeE+7uZAwTSwFeB/qaO0be8xZYUNWprJ/GIwL8aMt9cj1kvbpTZhg==}
     requiresBuild: true
     dev: false
 
