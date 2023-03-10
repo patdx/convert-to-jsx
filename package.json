@@ -29,7 +29,7 @@
   "dependencies": {
     "@angular/compiler": "15.2.1",
     "@glimmer/syntax": "0.84.2",
-    "@nrwl/nx-cloud": "15.0.2",
+    "@nrwl/nx-cloud": "15.2.1",
     "core-js": "3.29.0",
     "css-to-style": "1.4.0",
     "document-register-element": "1.14.10",
