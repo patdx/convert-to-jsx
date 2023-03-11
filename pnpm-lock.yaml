@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@angular/compiler': 15.2.1
+  '@angular/compiler': 15.2.2
   '@babel/core': 7.21.0
   '@babel/preset-env': 7.20.2
   '@babel/preset-react': 7.18.6
@@ -65,7 +65,7 @@ specifiers:
   webpack: 5.75.0
 
 dependencies:
-  '@angular/compiler': 15.2.1
+  '@angular/compiler': 15.2.2
   '@glimmer/syntax': 0.84.2
   '@nrwl/nx-cloud': 15.0.2
   core-js: 3.29.0
@@ -139,11 +139,11 @@ packages:
       '@jridgewell/gen-mapping': 0.1.1
       '@jridgewell/trace-mapping': 0.3.17
 
-  /@angular/compiler/15.2.1:
-    resolution: {integrity: sha512-eOA09iQWPEOJXig6W+out8MyZL2wdVu62Z79PWGQG8RWDSPV8XUFMAPfTOC8B43PT4hn/Avy/aauXl6O9l3vXw==}
+  /@angular/compiler/15.2.2:
+    resolution: {integrity: sha512-Zv2XpyOoiRDzTxkB5YaMx8egEf7hkVYkCSPvES5IXAlcs4lA1SdWHiNk7zstGMjqQlMt6RNgN8E+2BYrOJh6DQ==}
     engines: {node: ^14.20.0 || ^16.13.0 || >=18.10.0}
     peerDependencies:
-      '@angular/core': 15.2.1
+      '@angular/core': 15.2.2
     peerDependenciesMeta:
       '@angular/core':
         optional: true
