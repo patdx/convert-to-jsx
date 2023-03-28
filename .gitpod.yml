@@ -5,3 +5,9 @@
 tasks:
   - init: pnpm install && pnpm build
     # command: yarn run start
+
+vscode:
+  extensions:
+    - 'nrwl.angular-console'
+    - 'esbenp.prettier-vscode'
+    - 'dbaeumer.vscode-eslint'
