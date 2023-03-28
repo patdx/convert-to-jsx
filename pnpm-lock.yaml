@@ -51,7 +51,7 @@ specifiers:
   jest: 29.5.0
   lodash: 4.17.21
   mobx: 6.8.0
-  mobx-react-lite: 3.4.3
+  mobx-react-lite: 4.0.2
   mobx-utils: ^6.0.5
   next: 13.1.6
   nx: 15.8.9
@@ -82,7 +82,7 @@ dependencies:
   is-self-closing: 1.0.1
   lodash: 4.17.21
   mobx: 6.8.0
-  mobx-react-lite: 3.4.3_woojb62cqeyk443mbl7msrwu2e
+  mobx-react-lite: 4.0.2_woojb62cqeyk443mbl7msrwu2e
   mobx-utils: 6.0.5_mobx@6.8.0
   next: 13.1.6_6m24vuloj5ihw4zc5lbsktc4fu
   react: 18.2.0
@@ -7999,10 +7999,10 @@ packages:
     hasBin: true
     dev: false
 
-  /mobx-react-lite/3.4.3_woojb62cqeyk443mbl7msrwu2e:
-    resolution: {integrity: sha512-NkJREyFTSUXR772Qaai51BnE1voWx56LOL80xG7qkZr6vo8vEaLF3sz1JNUVh+rxmUzxYaqOhfuxTfqUh0FXUg==}
+  /mobx-react-lite/4.0.2_woojb62cqeyk443mbl7msrwu2e:
+    resolution: {integrity: sha512-5o7for7/5QLpgzKvA3ZjrO8TmfkZgVcSjwYalGlW6OkK/fCxmVlwbFeoWJQzWbkWSxlcaatTO0j4riAUvWoqMg==}
     peerDependencies:
-      mobx: ^6.1.0
+      mobx: ^6.9.0
       react: ^16.8.0 || ^17 || ^18
       react-dom: '*'
       react-native: '*'
@@ -8015,6 +8015,7 @@ packages:
       mobx: 6.8.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+      use-sync-external-store: 1.2.0_react@18.2.0
     dev: false
 
   /mobx-utils/6.0.5_mobx@6.8.0:
@@ -10240,6 +10241,14 @@ packages:
       schema-utils: 3.1.1
       webpack: 5.76.1
     dev: true
+
+  /use-sync-external-store/1.2.0_react@18.2.0:
+    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /util-deprecate/1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
