@@ -19,7 +19,7 @@ const EXAMPLE_INPUT_ANGULAR = `<div #myContainer>
   </div>
 </div>`;
 
-const EXAMLE_INPUT_HANDLEBARS = `<div>
+const EXAMPLE_INPUT_HANDLEBARS = `<div>
   <ul class="people_list">
   {{#each people}}
     <li>{{this}}</li>
@@ -27,7 +27,20 @@ const EXAMLE_INPUT_HANDLEBARS = `<div>
   </ul>
 </div>`;
 
-type Compiler = 'angular' | 'handlebars';
+const EXAMPLE_INPUT_PUG = `#user
+if user.description
+  h2.green Description
+  p.description= user.description
+else if authorised
+  h2.blue Description
+  p.description.
+    User has no description,
+    why not add one...
+else
+  h2.red Description
+  p.description User has no description`;
+
+type Compiler = 'angular' | 'handlebars' | 'pug';
 
 type State = {
   compiler: Compiler;
@@ -47,7 +60,8 @@ const state = (() => {
     compiler: 'angular',
     codeForCompiler: {
       angular: EXAMPLE_INPUT_ANGULAR,
-      handlebars: EXAMLE_INPUT_HANDLEBARS,
+      handlebars: EXAMPLE_INPUT_HANDLEBARS,
+      pug: EXAMPLE_INPUT_PUG,
     },
   });
 
@@ -74,11 +88,15 @@ const state = (() => {
                 'handlebars-to-jsx'
               );
               output = compileHandlebarsToJsx(code ?? '');
-            } else {
+            } else if (compiler === 'angular') {
               const { compileAngularToJsx } = await import(
                 '@ctj/angular-to-jsx'
               );
               output = compileAngularToJsx(code ?? '');
+            } else {
+              // pug
+              const { pugToJsx } = await import('../utils/pug-to-jsx');
+              output = await pugToJsx(code ?? '');
             }
 
             try {
@@ -90,6 +108,7 @@ const state = (() => {
 
             return output;
           } catch (err) {
+            console.error(err);
             return String(err);
           }
         })
@@ -125,6 +144,7 @@ const Home = observer(function Home() {
             >
               <option value="handlebars">Handlebars to React JSX</option>
               <option value="angular">Angular to React JSX</option>
+              <option value="pug">Pug to React JSX</option>
             </select>
             <textarea
               className="block w-full flex-1 font-mono"
@@ -168,7 +188,24 @@ const Home = observer(function Home() {
             Source
           </a>
           &middot;
-          <span>Conversion happens locally in your browser</span>
+          <span>Conversion is in your browser, no data sent to server</span>
+          &middot;
+          <span>
+            Special thanks to{' '}
+            <a
+              className="text-blue-700 hover:underline"
+              href="https://www.npmjs.com/package/babel-plugin-transform-react-pug"
+            >
+              babel-plugin-transform-react-pug
+            </a>
+            ,{' '}
+            <a
+              className="text-blue-700 hover:underline"
+              href="https://www.npmjs.com/package/handlebars-to-jsx"
+            >
+              handlebars-to-jsx
+            </a>
+          </span>
         </div>
       </div>
     </>
