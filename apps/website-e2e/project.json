@@ -1,10 +1,11 @@
 {
+  "name": "website-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/website-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
-      "executor": "@nrwl/cypress:cypress",
+      "executor": "@nx/cypress:cypress",
       "options": {
         "cypressConfig": "apps/website-e2e/cypress.json",
         "tsConfig": "apps/website-e2e/tsconfig.e2e.json",
@@ -17,7 +18,7 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": [
           "apps/website-e2e/**/*.{js,ts}"
@@ -30,6 +31,5 @@
   },
   "implicitDependencies": [
     "website"
-  ],
-  "name": "website-e2e"
+  ]
 }

@@ -1,10 +1,11 @@
 {
+  "name": "angular-to-jsx",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/angular-to-jsx/src",
   "projectType": "library",
   "targets": {
     "build-DISABLED": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "@nx/js:tsc",
       "outputs": [
         "{options.outputPath}"
       ],
@@ -18,7 +19,7 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": [
           "libs/angular-to-jsx/**/*.ts"
@@ -29,7 +30,7 @@
       ]
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": [
         "{workspaceRoot}/coverage/libs/angular-to-jsx"
       ],
@@ -38,6 +39,5 @@
         "passWithNoTests": true
       }
     }
-  },
-  "name": "angular-to-jsx"
+  }
 }
