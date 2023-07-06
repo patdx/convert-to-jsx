@@ -1,13 +1,17 @@
-import { transformSync } from '@babel/core';
+import { transformAsync } from '@babel/core';
+import transformReactPug from 'babel-plugin-transform-react-pug';
+import { escapeTemplateString } from './escape-template-string';
 
-const PREFIX = 'const Component = props => pug`';
-const SUFFIX = '`;';
+const PREFIX = 'export function Component(props) { return pug`';
+const SUFFIX = '`};';
 
-export function pugToJsx(code: string) {
-  const template = PREFIX + code + SUFFIX;
-  const out = transformSync(template, {
-    plugins: [require('babel-plugin-transform-react-pug')],
+export async function pugToJsx(code: string) {
+  const template = PREFIX + escapeTemplateString(code) + SUFFIX;
+  const out = await transformAsync(template, {
+    plugins: [transformReactPug],
   });
+
+  console.log(out);
 
   return out.code;
 }

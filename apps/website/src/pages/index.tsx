@@ -96,7 +96,7 @@ const state = (() => {
             } else {
               // pug
               const { pugToJsx } = await import('../utils/pug-to-jsx');
-              output = pugToJsx(code ?? '');
+              output = await pugToJsx(code ?? '');
             }
 
             try {
@@ -108,6 +108,7 @@ const state = (() => {
 
             return output;
           } catch (err) {
+            console.error(err);
             return String(err);
           }
         })
@@ -187,7 +188,24 @@ const Home = observer(function Home() {
             Source
           </a>
           &middot;
-          <span>Conversion happens locally in your browser</span>
+          <span>Conversion is in your browser, no data sent to server</span>
+          &middot;
+          <span>
+            Special thanks to{' '}
+            <a
+              className="text-blue-700 hover:underline"
+              href="https://www.npmjs.com/package/babel-plugin-transform-react-pug"
+            >
+              babel-plugin-transform-react-pug
+            </a>
+            ,{' '}
+            <a
+              className="text-blue-700 hover:underline"
+              href="https://www.npmjs.com/package/handlebars-to-jsx"
+            >
+              handlebars-to-jsx
+            </a>
+          </span>
         </div>
       </div>
     </>
