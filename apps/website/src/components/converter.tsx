@@ -1,6 +1,7 @@
-import { action, extendObservable, makeAutoObservable, untracked } from 'mobx';
+'use client';
+
+import { action, extendObservable, makeAutoObservable } from 'mobx';
 import { observer } from 'mobx-react-lite';
-import Head from 'next/head';
 import { fromPromise } from 'mobx-utils';
 
 const EXAMPLE_INPUT_ANGULAR = `<div #myContainer>
@@ -120,18 +121,9 @@ const state = (() => {
   return state;
 })();
 
-const Home = observer(function Home() {
+export const Converter = observer(function Converter() {
   return (
     <>
-      <Head>
-        <title>
-          {state.compiler === 'angular'
-            ? 'Convert Angular to React JSX'
-            : 'Convert Handlebars to React JSX'}
-        </title>
-        {/* <link rel="icon" href="/favicon.ico" /> */}
-      </Head>
-
       <div className="flex flex-col h-screen">
         <div className="flex flex-1 flex-col md:flex-row">
           <div className="flex-1 flex flex-col">
@@ -211,5 +203,3 @@ const Home = observer(function Home() {
     </>
   );
 });
-
-export default Home;
