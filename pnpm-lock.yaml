@@ -11,8 +11,8 @@ overrides:
 
 dependencies:
   '@angular/compiler':
-    specifier: 17.0.2
-    version: 17.0.2
+    specifier: 17.0.3
+    version: 17.0.3
   '@glimmer/syntax':
     specifier: 0.85.13
     version: 0.85.13
@@ -229,11 +229,11 @@ packages:
       '@jridgewell/gen-mapping': 0.3.3
       '@jridgewell/trace-mapping': 0.3.20
 
-  /@angular/compiler@17.0.2:
-    resolution: {integrity: sha512-ewUFbKhMEhAmw2dGfk0ImhTlyrO2y4pJSKIZdFrkR1d0HiJX8bCHUdTiiR/2jeP7w2eamjXj15Rptb+iZZes2Q==}
+  /@angular/compiler@17.0.3:
+    resolution: {integrity: sha512-ryUcj8Vc+Q4jMrjrmsEIsGLXeWSmNE/KoTyURPCH+NWq9GBMbjv4oe0/oFSBMN2ZtRMVCvqv2Nq+Z2KRDRGB0A==}
     engines: {node: ^18.13.0 || >=20.9.0}
     peerDependencies:
-      '@angular/core': 17.0.2
+      '@angular/core': 17.0.3
     peerDependenciesMeta:
       '@angular/core':
         optional: true
