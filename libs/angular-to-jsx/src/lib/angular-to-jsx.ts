@@ -1,8 +1,8 @@
 import * as t from '@angular/compiler';
 import { parseTemplate, TmplAstNode } from '@angular/compiler';
 import { camelCase, pad, startCase } from 'lodash';
-import { format } from 'prettier';
-import parserBabel from 'prettier/parser-babel';
+// import { format } from 'prettier';
+// import pluginBabel from 'prettier/plugins/babel';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore react-attr-converter is an old library
 import convertAttribute from 'react-attr-converter';
@@ -102,11 +102,11 @@ const printNode = ({
       scriptContext === 'script' ? `</>` : ``
     }`;
   } else if (node instanceof t.TmplAstBoundText) {
-    return `${spaces}${
-      scriptContext === 'script' ? `<>` : ``
-    }${(node.value as any).source.replace(/{{/g, '{').replace(/}}/g, '}')}${
-      scriptContext === 'script' ? `</>` : ``
-    }`;
+    return `${spaces}${scriptContext === 'script' ? `<>` : ``}${(
+      node.value as any
+    ).source
+      .replace(/{{/g, '{')
+      .replace(/}}/g, '}')}${scriptContext === 'script' ? `</>` : ``}`;
   } else if (node instanceof t.TmplAstTemplate) {
     const templateType = node.templateAttrs?.[0]?.name;
     if (templateType === 'ngFor') {
@@ -150,13 +150,13 @@ const printNode = ({
         ? // TODO: support <> syntax
           'Fragment'
         : node.name.includes('-')
-        ? pascalCase(node.name)
-        : node.name.startsWith(`:svg:`)
-        ? // Note: seems like this is just an internal prefix of the Angular compiler that
-          // we need to process. Other HTML parsers on ASTExplorer do it differently.
-          // https://github.com/angular/angular/blob/a92a89b0eb127a59d7e071502b5850e57618ec2d/packages/compiler/test/schema/schema_extractor.ts
-          node.name.replace(`:svg:`, ``)
-        : node.name;
+          ? pascalCase(node.name)
+          : node.name.startsWith(`:svg:`)
+            ? // Note: seems like this is just an internal prefix of the Angular compiler that
+              // we need to process. Other HTML parsers on ASTExplorer do it differently.
+              // https://github.com/angular/angular/blob/a92a89b0eb127a59d7e071502b5850e57618ec2d/packages/compiler/test/schema/schema_extractor.ts
+              node.name.replace(`:svg:`, ``)
+            : node.name;
 
     if (tagName === 'Fragment') {
       convertContext.reactImports.add('Fragment');
@@ -200,7 +200,7 @@ const printNode = ({
       } else {
         // check for boolean
         const isBoolean = BOOLEAN_PROPERTIES.some(
-          (prop) => prop.toLowerCase() === attr.name.toLowerCase()
+          (prop) => prop.toLowerCase() === attr.name.toLowerCase(),
         );
 
         if (isBoolean) {
@@ -309,13 +309,13 @@ const printNode = ({
           // Input:  [class.x]="test"
           // Output: className={classNames('', { x: test })}
           classNameArguments.push(
-            value.bound ? value.value : `"${value.value}"`
+            value.bound ? value.value : `"${value.value}"`,
           );
         }
         classNameArguments.push(
           `{${Object.entries((value as ClassNameProp).conditional ?? {})
             .map(([key, value]) => `"${key}": ${value}`)
-            .join(', ')}}`
+            .join(', ')}}`,
         );
 
         text += ` ${key}={clsx(${classNameArguments.join(', ')})}`;
@@ -347,13 +347,13 @@ const printNode = ({
         const ngSwitchDefaultBlock = node.children.find(
           (child) =>
             (child as t.TmplAstTemplate).templateAttrs[0].name ===
-            'ngSwitchDefault'
+            'ngSwitchDefault',
         );
 
         const ngSwitchCaseBlocks = node.children.filter(
           (child) =>
             (child as t.TmplAstTemplate).templateAttrs[0].name ===
-            'ngSwitchCase'
+            'ngSwitchCase',
         );
 
         // text += `${spaces}{test ? (${children[0]}) :
@@ -426,7 +426,7 @@ const printNodeFragment = ({
               indent: indent + 2,
               scriptContext: 'template',
               convertContext,
-            })
+            }),
           )
           .join('\n')}` +
         '\n' +
@@ -452,13 +452,13 @@ const printNodeFragment = ({
           indent: indent + 2,
           scriptContext: 'template',
           convertContext,
-        })
+        }),
       )
       .join('\n');
   }
 };
 
-export const compileAngularToJsx = (code: string) => {
+export const compileAngularToJsx = async (code: string) => {
   const ast = parseTemplate(code, 'stub').nodes;
 
   const convertContext: ConvertContext = {
@@ -483,10 +483,7 @@ export const compileAngularToJsx = (code: string) => {
       `import { ${[...convertContext.reactImports].join(', ')} } from 'react';`;
   }
 
-  if (
-    convertContext.importClsx ||
-    convertContext.reactImports.size >= 1
-  ) {
+  if (convertContext.importClsx || convertContext.reactImports.size >= 1) {
     text += '\n';
   }
 
@@ -504,21 +501,23 @@ export const compileAngularToJsx = (code: string) => {
 
   text += `  return ${componentBody};};`;
 
-  try {
-    text = format(text, {
-      parser: 'babel',
-      plugins: [parserBabel],
-      trailingComma: 'es5',
-      singleQuote: true,
-      tabWidth: 2,
-    });
-  } catch (err) {
-    text = `WARNING: Tried to format but got error:\n${resolveErrorMessage(err)}\n\n` + text;
-  }
+  // try {
+  //   text = await format(text, {
+  //     parser: 'babel',
+  //     plugins: [pluginBabel],
+  //     trailingComma: 'es5',
+  //     singleQuote: true,
+  //     tabWidth: 2,
+  //   });
+  // } catch (err) {
+  //   text =
+  //     `WARNING: Tried to format but got error:\n${resolveErrorMessage(
+  //       err,
+  //     )}\n\n` + text;
+  // }
   return text;
 };
 
-
 function resolveErrorMessage(err: unknown): string | undefined {
-  return get(err, "message") || String(err)
+  return get(err, 'message') || String(err);
 }

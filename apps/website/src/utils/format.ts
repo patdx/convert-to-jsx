@@ -1,10 +1,11 @@
 import { format as prettierFormat } from 'prettier';
-import parserBabel from 'prettier/parser-babel';
+import pluginBabel from 'prettier/plugins/babel';
+import pluginEstree from 'prettier/plugins/estree';
 
 export function format(code: string) {
   return prettierFormat(code, {
     parser: 'babel',
-    plugins: [parserBabel],
+    plugins: [pluginBabel, pluginEstree],
     singleQuote: true,
   });
 }

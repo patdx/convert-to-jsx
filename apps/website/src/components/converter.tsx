@@ -93,7 +93,7 @@ const state = (() => {
               const { compileAngularToJsx } = await import(
                 '@ctj/angular-to-jsx'
               );
-              output = compileAngularToJsx(code ?? '');
+              output = await compileAngularToJsx(code ?? '');
             } else {
               // pug
               const { pugToJsx } = await import('../utils/pug-to-jsx');
@@ -102,7 +102,7 @@ const state = (() => {
 
             try {
               const { format } = await import('../utils/format');
-              output = format(output);
+              output = await format(output);
             } catch (err) {
               console.log(err);
             }
@@ -112,7 +112,7 @@ const state = (() => {
             console.error(err);
             return String(err);
           }
-        })
+        }),
         // lastPromise
       );
     },
