@@ -79,7 +79,7 @@
     "babel-jest": "29.7.0",
     "cypress": "^13.5.1",
     "dotenv": "16.3.1",
-    "eslint": "8.53.0",
+    "eslint": "8.54.0",
     "eslint-config-next": "14.0.3",
     "eslint-config-prettier": "9.0.0",
     "eslint-plugin-cypress": "2.15.1",
