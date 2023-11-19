@@ -20,8 +20,8 @@ dependencies:
     specifier: ^7.0.1
     version: 7.0.1
   core-js:
-    specifier: 3.33.2
-    version: 3.33.2
+    specifier: 3.33.3
+    version: 3.33.3
   css-to-style:
     specifier: 1.4.0
     version: 1.4.0
@@ -4549,8 +4549,8 @@ packages:
     deprecated: core-js@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js.
     dev: false
 
-  /core-js@3.33.2:
-    resolution: {integrity: sha512-XeBzWI6QL3nJQiHmdzbAOiMYqjrb7hwU7A39Qhvd/POSa/t9E1AeZyEZx3fNvp/vtM8zXwhoL0FsiS0hD0pruQ==}
+  /core-js@3.33.3:
+    resolution: {integrity: sha512-lo0kOocUlLKmm6kv/FswQL8zbkH7mVsLJ/FULClOhv8WRVmKLVcs6XPNQAzstfeJTCHMyButEwG+z1kHxHoDZw==}
     dev: false
 
   /core-util-is@1.0.2:
