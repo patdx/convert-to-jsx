@@ -29,7 +29,7 @@
   "private": true,
   "dependencies": {
     "@angular/compiler": "17.1.1",
-    "@glimmer/syntax": "0.87.1",
+    "@glimmer/syntax": "0.88.0",
     "babel-plugin-transform-react-pug": "^7.0.1",
     "core-js": "3.35.1",
     "css-to-style": "1.4.0",
