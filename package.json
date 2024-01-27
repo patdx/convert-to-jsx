@@ -70,7 +70,7 @@
     "@types/css-to-style": "1.2.2",
     "@types/jest": "29.5.11",
     "@types/lodash": "4.14.202",
-    "@types/node": "20.11.7",
+    "@types/node": "20.11.8",
     "@types/react": "18.2.48",
     "@types/react-dom": "18.2.18",
     "@typescript-eslint/eslint-plugin": "6.19.1",
@@ -103,6 +103,6 @@
       "uglify-js": "$uglify-js"
     }
   },
-  "packageManager": "pnpm@8.14.3"
+  "packageManager": "pnpm@8.15.0"
 }
 
