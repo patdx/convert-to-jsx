@@ -103,6 +103,6 @@
       "uglify-js": "$uglify-js"
     }
   },
-  "packageManager": "pnpm@8.15.0"
+  "packageManager": "pnpm@9.0.5"
 }
 
