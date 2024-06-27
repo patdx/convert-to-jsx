@@ -38,7 +38,7 @@
     "handlebars-to-jsx": "0.1.5",
     "is-self-closing": "1.0.1",
     "lodash": "4.17.21",
-    "mobx": "6.12.3",
+    "mobx": "6.12.4",
     "mobx-react-lite": "4.0.7",
     "mobx-utils": "^6.0.8",
     "next": "14.1.0",
