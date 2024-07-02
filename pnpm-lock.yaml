@@ -42,14 +42,14 @@ importers:
         specifier: 4.17.21
         version: 4.17.21
       mobx:
-        specifier: 6.12.5
-        version: 6.12.5
+        specifier: 6.13.0
+        version: 6.13.0
       mobx-react-lite:
         specifier: 4.0.7
-        version: 4.0.7(mobx@6.12.5)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 4.0.7(mobx@6.13.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       mobx-utils:
         specifier: ^6.0.8
-        version: 6.0.8(mobx@6.12.5)
+        version: 6.0.8(mobx@6.13.0)
       next:
         specifier: 14.1.0
         version: 14.1.0(@babel/core@7.23.9)(babel-plugin-macros@2.8.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -3794,8 +3794,8 @@ packages:
     peerDependencies:
       mobx: ^6.0.0
 
-  mobx@6.12.5:
-    resolution: {integrity: sha512-xRq2tyY6unAec0ItlsrgoCuxrWXLoIkM5cGPuerm/0nX/CI9FxAO6ttfRYfFa+B5Yz51d59IfKy0mJwxOEwqzQ==}
+  mobx@6.13.0:
+    resolution: {integrity: sha512-1laWODrBWmB7mDJ8EClCjUQTyLwJ0ydJgE4FtK7t9r3JnjXgc9OhmYs2P4RtHrY1co5+4T6cKP2UswX2SU29mA==}
 
   ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
@@ -9710,19 +9710,19 @@ snapshots:
     dependencies:
       minimist: 1.2.8
 
-  mobx-react-lite@4.0.7(mobx@6.12.5)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+  mobx-react-lite@4.0.7(mobx@6.13.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
-      mobx: 6.12.5
+      mobx: 6.13.0
       react: 18.2.0
       use-sync-external-store: 1.2.0(react@18.2.0)
     optionalDependencies:
       react-dom: 18.2.0(react@18.2.0)
 
-  mobx-utils@6.0.8(mobx@6.12.5):
+  mobx-utils@6.0.8(mobx@6.13.0):
     dependencies:
-      mobx: 6.12.5
+      mobx: 6.13.0
 
-  mobx@6.12.5: {}
+  mobx@6.13.0: {}
 
   ms@2.1.2: {}
 
