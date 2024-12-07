@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  uglify-js: ^3.17.4
+  uglify-js: ^3.19.3
 
 importers:
 
