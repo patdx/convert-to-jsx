@@ -22,13 +22,14 @@
     ]
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
     "**/*.js",
     "**/*.jsx",
-    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
     "../../apps/website/.next/types/**/*.ts",
-    "../../dist/apps/website/.next/types/**/*.ts"
+    "../../dist/apps/website/.next/types/**/*.ts",
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",

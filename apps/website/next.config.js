@@ -9,7 +9,7 @@ const nextConfig = {
   nx: {
     // Set this to false if you do not want to use SVGR
     // See: https://github.com/gregberge/svgr
-    svgr: true,
+    svgr: false,
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {
