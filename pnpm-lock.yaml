@@ -42,14 +42,14 @@ importers:
         specifier: 4.17.21
         version: 4.17.21
       mobx:
-        specifier: 6.13.7
-        version: 6.13.7
+        specifier: 6.15.0
+        version: 6.15.0
       mobx-react-lite:
-        specifier: 4.1.0
-        version: 4.1.0(mobx@6.13.7)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: 4.1.1
+        version: 4.1.1(mobx@6.15.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       mobx-utils:
         specifier: ^6.1.0
-        version: 6.1.0(mobx@6.13.7)
+        version: 6.1.0(mobx@6.15.0)
       next:
         specifier: 15.0.4
         version: 15.0.4(@babel/core@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.82.0)
@@ -4838,8 +4838,8 @@ packages:
     resolution: {integrity: sha512-FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw==}
     hasBin: true
 
-  mobx-react-lite@4.1.0:
-    resolution: {integrity: sha512-QEP10dpHHBeQNv1pks3WnHRCem2Zp636lq54M2nKO2Sarr13pL4u6diQXf65yzXUn0mkk18SyIDCm9UOJYTi1w==}
+  mobx-react-lite@4.1.1:
+    resolution: {integrity: sha512-iUxiMpsvNraCKXU+yPotsOncNNmyeS2B5DKL+TL6Tar/xm+wwNJAubJmtRSeAoYawdZqwv8Z/+5nPRHeQxTiXg==}
     peerDependencies:
       mobx: ^6.9.0
       react: ^16.8.0 || ^17 || ^18 || ^19
@@ -4856,8 +4856,8 @@ packages:
     peerDependencies:
       mobx: ^6.0.0
 
-  mobx@6.13.7:
-    resolution: {integrity: sha512-aChaVU/DO5aRPmk1GX8L+whocagUUpBQqoPtJk+cm7UOXUk87J4PeWCh6nNmTTIfEhiR9DI/+FnA8dln/hTK7g==}
+  mobx@6.15.0:
+    resolution: {integrity: sha512-UczzB+0nnwGotYSgllfARAqWCJ5e/skuV2K/l+Zyck/H6pJIhLXuBnz+6vn2i211o7DtbE78HQtsYEKICHGI+g==}
 
   ms@2.0.0:
     resolution: {integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==}
@@ -12597,19 +12597,19 @@ snapshots:
     dependencies:
       minimist: 1.2.8
 
-  mobx-react-lite@4.1.0(mobx@6.13.7)(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+  mobx-react-lite@4.1.1(mobx@6.15.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
-      mobx: 6.13.7
+      mobx: 6.15.0
       react: 19.0.0
       use-sync-external-store: 1.4.0(react@19.0.0)
     optionalDependencies:
       react-dom: 19.0.0(react@19.0.0)
 
-  mobx-utils@6.1.0(mobx@6.13.7):
+  mobx-utils@6.1.0(mobx@6.15.0):
     dependencies:
-      mobx: 6.13.7
+      mobx: 6.15.0
 
-  mobx@6.13.7: {}
+  mobx@6.15.0: {}
 
   ms@2.0.0: {}
 
