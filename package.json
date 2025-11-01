@@ -28,7 +28,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/compiler": "19.0.3",
+    "@angular/compiler": "20.3.9",
     "@glimmer/syntax": "0.93.1",
     "babel-plugin-transform-react-pug": "^7.0.1",
     "core-js": "3.39.0",
