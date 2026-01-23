@@ -1,5 +1,3 @@
-'use client';
-
 import { action, extendObservable, makeAutoObservable } from 'mobx';
 import { observer } from 'mobx-react-lite';
 import { fromPromise } from 'mobx-utils';

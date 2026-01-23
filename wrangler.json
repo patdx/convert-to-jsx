@@ -3,6 +3,6 @@
   "name": "convert-to-jsx",
   "compatibility_date": "2025-01-01",
   "assets": {
-    "directory": "./dist/apps/website/.next"
+    "directory": "./dist"
   }
 }
