@@ -1,3 +1,3 @@
-const { getJestProjectsAsync } = require('@nx/jest');
-
-export default async () => ({ projects: await getJestProjectsAsync() });
+export default {
+  projects: ['<rootDir>/libs/angular-to-jsx'],
+};

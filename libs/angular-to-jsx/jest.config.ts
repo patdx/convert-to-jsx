@@ -1,16 +1,19 @@
 /* eslint-disable */
 export default {
   displayName: 'angular-to-jsx',
-  preset: '../../jest.preset.js',
+  preset: 'ts-jest',
+  testEnvironment: 'node',
   globals: {},
   transform: {
     '^.+\\.[tj]sx?$': [
       'ts-jest',
       {
-        tsconfig: '<rootDir>/tsconfig.spec.json',
+        tsconfig: '<rootDir>/libs/angular-to-jsx/tsconfig.spec.json',
       },
     ],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/libs/angular-to-jsx',
+  rootDir: '../..',
+  roots: ['<rootDir>/libs/angular-to-jsx/src'],
+  testMatch: ['**/?(*.)+(spec|test).[jt]s?(x)'],
 };

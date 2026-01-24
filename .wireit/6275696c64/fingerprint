@@ -1,0 +1,1 @@
+{"fullyTracked":false,"platform":"linux","arch":"x64","nodeVersion":"v24.13.0","command":"vite build --config vite.config.ts","extraArgs":[],"clean":true,"files":{},"output":[],"dependencies":{},"env":{}}
